@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:furn_aldeaa/Constants.dart';
-import 'package:furn_aldeaa/widgets/CustomTextField.dart';
 import 'package:furn_aldeaa/widgets/RoundedButton.dart';
-import 'package:furn_aldeaa/widgets/searchField.dart';
 
 class EnterAddress extends StatefulWidget {
   static const String id = 'enterAddress';

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Offer {
   String name;
   String offerText;
@@ -28,33 +26,25 @@ class Resturant {
 
 List<Offer> offers = [
   Offer(
-    name: "pizza",
-    offerText: "1 + 1 FREE",
-    image: "images/بيتزا مارغريتا.jpg",
-    resturantsList: resturantList
-
-  ),
+      name: "pizza",
+      offerText: "1 + 1 FREE",
+      image: "images/بيتزا مارغريتا.jpg",
+      resturantsList: resturantList),
   Offer(
       name: "pizza",
       offerText: "1 + 1 FREE",
       image: "images/بيتزا مارغريتا.jpg",
-      resturantsList: resturantList
-
-  ),
+      resturantsList: resturantList),
   Offer(
       name: "pizza",
       offerText: "1 + 1 FREE",
       image: "images/بيتزا مارغريتا.jpg",
-      resturantsList: resturantList
-
-  ),
+      resturantsList: resturantList),
   Offer(
       name: "pizza",
       offerText: "1 + 1 FREE",
       image: "images/بيتزا مارغريتا.jpg",
-      resturantsList: resturantList
-
-  ),
+      resturantsList: resturantList),
 ];
 
 Resturant resturant1 = Resturant(
@@ -91,5 +81,3 @@ List<Resturant> resturantList = [
   resturant3,
   resturant4
 ];
-
-
