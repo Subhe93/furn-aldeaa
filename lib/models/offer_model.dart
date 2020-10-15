@@ -24,6 +24,46 @@ class Resturant {
       this.deliveryFee});
 }
 
+class Dish{
+  String name;
+  String image;
+  double price;
+
+  Dish({this.name, this.image, this.price});
+}
+
+List<Dish> dishes = [
+  Dish(
+      name: "Classic Burger",
+
+      image: "images/دجاج مدخن.JPG",
+      price: 22.99
+
+  ),
+  Dish(
+      name: "Prosciutto",
+
+      image: "images/حمص.jpg",
+      price: 18.99
+
+  ),
+  Dish(
+      name: "pizza",
+
+      image: "images/بيتزا مارغريتا.jpg",
+      price: 22
+
+  ),
+  Dish(
+      name: "pizza",
+
+      image: "images/بيتزا مارغريتا.jpg",
+      price: 22
+
+  ),
+];
+
+
 List<Offer> offers = [
   Offer(
       name: "pizza",

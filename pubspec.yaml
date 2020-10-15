@@ -28,7 +28,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   font_awesome_flutter: ^8.4.0
   simple_animations: ^2.2.1
-  intl_phone_number_input: ^0.5.2+2
+  intl_phone_number_input:
   
 dev_dependencies:
   flutter_test:
