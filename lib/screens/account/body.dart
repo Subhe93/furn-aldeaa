@@ -26,84 +26,80 @@ class _AccountBodyState extends State<AccountBody> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ListTile(
-
                         title: Text('First Name'),
                         subtitle: Text('James'),
-                        trailing:Icon(Icons.arrow_forward_ios),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
-                       SizedBox(
+                      SizedBox(
                         height: 3.0,
                         child: new Center(
                           child: new Container(
-                            margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+                            margin: new EdgeInsetsDirectional.only(
+                                start: 1.0, end: 1.0),
                             height: 10.0,
                             color: KLightGreyColor,
                           ),
                         ),
                       ),
-
                       ListTile(
-
                         title: Text('Last Name'),
                         subtitle: Text('Smith'),
-                        trailing:Icon(Icons.arrow_forward_ios),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                       SizedBox(
                         height: 3.0,
                         child: new Center(
                           child: new Container(
-                            margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+                            margin: new EdgeInsetsDirectional.only(
+                                start: 1.0, end: 1.0),
                             height: 10.0,
                             color: KLightGreyColor,
                           ),
                         ),
                       ),
-
                       ListTile(
-
                         title: Text('Phone Number'),
                         subtitle: Text('0755 000 000'),
-                        trailing:Icon(Icons.arrow_forward_ios),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                       SizedBox(
                         height: 3.0,
                         child: new Center(
                           child: new Container(
-                            margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+                            margin: new EdgeInsetsDirectional.only(
+                                start: 1.0, end: 1.0),
                             height: 10.0,
                             color: KLightGreyColor,
                           ),
                         ),
                       ),
-
                       ListTile(
-
                         title: Text('Email Address'),
                         subtitle: Text('jamessmith@gmail.com'),
-                        trailing:Icon(Icons.arrow_forward_ios),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                       SizedBox(
                         height: 3.0,
                         child: new Center(
                           child: new Container(
-                            margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+                            margin: new EdgeInsetsDirectional.only(
+                                start: 1.0, end: 1.0),
                             height: 10.0,
                             color: KLightGreyColor,
                           ),
                         ),
                       ),
-
                       ListTile(
-
                         title: Text('Password'),
                         subtitle: Text('*******'),
-                        trailing:Icon(Icons.arrow_forward_ios),
+                        trailing: Icon(Icons.arrow_forward_ios),
                       ),
                       SizedBox(
                         height: 3.0,
                         child: new Center(
                           child: new Container(
-                            margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+                            margin: new EdgeInsetsDirectional.only(
+                                start: 1.0, end: 1.0),
                             height: 10.0,
                             color: KLightGreyColor,
                           ),
