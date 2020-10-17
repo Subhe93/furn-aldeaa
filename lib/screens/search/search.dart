@@ -16,48 +16,212 @@ class _searchState extends State<search> {
   Widget build(BuildContext context) {
     return Container(
       height: 650,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 50,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 60,
+                  ),
+                  Text(
+                    "Search for restaurants or dishs",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    width: 60,
+                    child: FlatButton(
+                        onPressed: () => {Navigator.pop(context)},
+                        child: Icon(Icons.cancel)),
+                  )
+                ],
+              ),
+            ),
+            Divider(
+              height: 5,
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            SearchBox(textController: _textController),
+            SizedBox(
+              height: 20,
+            ),
+            _textController.text.isEmpty
+                ? RecentSearchTap()
+                : SearchResultsTap()
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SearchResultsTap extends StatelessWidget {
+  const SearchResultsTap({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0),
+          child: Text(
+            'RESTAURANTS',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+            height: 200,
+            child: Expanded(
+              child: ListView(
+                children: [
+                  RestaurantCell(
+                    name: 'The Pizza Factory',
+                  ),
+                  RestaurantCell(
+                    name: 'The Pizza Factory',
+                  ),
+                  RestaurantCell(
+                    name: 'The Pizza Factory',
+                  ),
+                  RestaurantCell(
+                    name: 'The Pizza Factory',
+                  ),
+                  RestaurantCell(
+                    name: 'The Pizza Factory',
+                  )
+                ],
+              ),
+            )),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0),
+          child: Text(
+            'DISHES',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 200,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Expanded(
+              child: ListView(
+                children: [
+                  DishCell(
+                    name: 'Quattro Formaggi Pizza ',
+                    restaurant: 'The Pizza Factory',
+                    price: '19.00',
+                  ),
+                  DishCell(
+                    name: 'Quattro Formaggi Pizza ',
+                    restaurant: 'The Pizza Factory',
+                    price: '19.00',
+                  ),
+                  DishCell(
+                    name: 'Quattro Formaggi Pizza ',
+                    restaurant: 'The Pizza Factory',
+                    price: '19.00',
+                  ),
+                ],
+              ),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class DishCell extends StatelessWidget {
+  String name;
+  String restaurant;
+  String price;
+
+  DishCell({this.name, this.price, this.restaurant});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(name,
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(
+                  restaurant,
+                  style: TextStyle(color: Colors.grey),
+                ),
+                Text(
+                  price,
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ],
+            ),
+            Container(
+              height: 70,
+              width: 70,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                      image: AssetImage('images/طوشكا.jpg'),
+                      fit: BoxFit.cover)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RestaurantCell extends StatelessWidget {
+  String name;
+
+  RestaurantCell({this.name});
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
         children: [
           Container(
             height: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 60,
-                ),
-                Text(
-                  "Search for restaurants or dishs",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
-                ),
-                Container(
-                  width: 60,
-                  child: FlatButton(
-                      onPressed: () => {Navigator.pop(context)},
-                      child: Icon(Icons.cancel)),
-                )
-              ],
-            ),
-          ),
-          Divider(
-            height: 5,
+            width: 50,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    image: AssetImage('images/طوشكا.jpg'), fit: BoxFit.cover)),
           ),
           SizedBox(
-            height: 15,
+            width: 5,
           ),
-          SearchBox(textController: _textController),
-          SizedBox(
-            height: 20,
-          ),
-          _textController.text.isEmpty
-              ? RecentSearchTap()
-              : new Container(
-                  height: 0.0,
-                ),
+          Text(name,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15))
         ],
       ),
     );
@@ -84,7 +248,7 @@ class RecentSearchTap extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Container(
-            height: 200,
+            height: 150,
             child: Expanded(
               child: ListView(
                 children: [
