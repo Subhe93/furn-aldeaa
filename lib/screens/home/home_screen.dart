@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:furn_aldeaa/screens/components/drawer.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:furn_aldeaa/screens/Map/map.dart';
 import 'package:furn_aldeaa/screens/search/filter.dart';
 import 'package:furn_aldeaa/screens/search/search.dart';
 import 'components/body.dart';
@@ -59,11 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           icon: Icon(Icons.search),
                           onPressed: () => {opensheet(context)}),
                       IconButton(
-                          icon: Icon(Icons.compare_sharp),
+                          icon: Icon(Icons.format_align_center_outlined),
                           onPressed: () => {openFilterSheet(context)}),
                       IconButton(
                           icon: Icon(Icons.location_on_rounded),
-                          onPressed: null)
+                          onPressed: () => {openMapSheet(context)})
                     ],
                   ),
                 ),
@@ -102,6 +103,21 @@ void openFilterSheet(context) async {
         return Padding(
           padding: MediaQuery.of(context).viewInsets,
           child: Filter(),
+        );
+      });
+}
+
+void openMapSheet(context) async {
+  showModalBottomSheet<dynamic>(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(25.0))),
+      context: (context),
+      isDismissible: false,
+      isScrollControlled: true,
+      builder: (context) {
+        return Padding(
+          padding: MediaQuery.of(context).viewInsets,
+          child: Map(),
         );
       });
 }
