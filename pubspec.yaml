@@ -32,6 +32,7 @@ dependencies:
   flutter_map: any
   flutter_map_marker_cluster: any
   geolocator: ^6.0.0+4
+  flutter_rating_bar: ^3.0.1+1
   
 dev_dependencies:
   flutter_test:

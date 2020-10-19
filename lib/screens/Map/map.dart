@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:furn_aldeaa/screens/Map/conponents/restaurantMiniCard.dart';
+import 'package:furn_aldeaa/screens/Map/restaurant_info_reviews.dart';
 import 'package:latlong/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -113,8 +114,26 @@ void opensheet(context) async {
           padding: MediaQuery.of(context).viewInsets,
           child: Container(
             height: 150,
-            child: RestaurantMiniCard(),
+            child: InkWell(
+              child: RestaurantMiniCard(),
+              onTap: () => {openInfo(context)},
+            ),
           ),
+        );
+      });
+}
+
+void openInfo(context) async {
+  showModalBottomSheet<dynamic>(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(25.0))),
+      context: (context),
+      isDismissible: false,
+      isScrollControlled: true,
+      builder: (context) {
+        return Padding(
+          padding: MediaQuery.of(context).viewInsets,
+          child: RestaurantInfoRivews(),
         );
       });
 }
