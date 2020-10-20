@@ -6,7 +6,6 @@ import 'package:furn_aldeaa/screens/offers/offer_screen.dart';
 import 'DishCard.dart';
 
 class DishesList extends StatefulWidget {
-
   @override
   _DishesListState createState() => _DishesListState();
 }
@@ -19,7 +18,6 @@ class _DishesListState extends State<DishesList> {
       itemCount: dishes.length,
       itemBuilder: (context, index) => DishCard(
         dish: dishes[index],
-
       ),
     );
   }
