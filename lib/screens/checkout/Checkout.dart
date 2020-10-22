@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/screens/checkout/screens/delivery_address.dart';
+import 'package:furn_aldeaa/screens/checkout/screens/payment_methods.dart';
+import 'package:furn_aldeaa/screens/enter_adress/enter_adress.dart';
 import 'package:furn_aldeaa/widgets/CustomRadioButton.dart';
 
 class Checkout extends StatefulWidget {
@@ -87,51 +90,55 @@ class _CheckoutState extends State<Checkout> {
                               const EdgeInsets.only(left: 15.0, right: 8.0),
                           child: Container(
                             height: 60,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(25),
-                                          color:
-                                              Colors.black12.withOpacity(0.1)),
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.location_on_outlined,
-                                          size: 25,
+                            child: InkWell(
+                              onTap: () => openDeliveryDetails(context),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 50,
+                                        width: 50,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            color: Colors.black12
+                                                .withOpacity(0.1)),
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.location_on_outlined,
+                                            size: 25,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text('Delivery Details',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black54)),
-                                        Text('Allea Callatis,Bucharest',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black54))
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                Icon(Icons.arrow_forward_ios_rounded)
-                              ],
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text('Delivery Details',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black54)),
+                                          Text('Allea Callatis,Bucharest',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black54))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                  Icon(Icons.arrow_forward_ios_rounded)
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -287,51 +294,55 @@ class _CheckoutState extends State<Checkout> {
                               const EdgeInsets.only(left: 15.0, right: 8.0),
                           child: Container(
                             height: 60,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(25),
-                                          color:
-                                              Colors.black12.withOpacity(0.1)),
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.attach_money_rounded,
-                                          size: 25,
+                            child: InkWell(
+                              onTap: () => openPaymetMethods(context),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 50,
+                                        width: 50,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            color: Colors.black12
+                                                .withOpacity(0.1)),
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.attach_money_rounded,
+                                            size: 25,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text('Payment Method',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black54)),
-                                        Text('Add payment Method',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black54))
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                Icon(Icons.arrow_forward_ios_rounded)
-                              ],
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text('Payment Method',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black54)),
+                                          Text('Add payment Method',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black54))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                  Icon(Icons.arrow_forward_ios_rounded)
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -406,15 +417,12 @@ class _CheckoutState extends State<Checkout> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
-                  onTap: () => Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => Checkout())),
+                  onTap: null,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Go to Checkout',
+                        'Begin Checkout',
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -433,4 +441,34 @@ class _CheckoutState extends State<Checkout> {
       ),
     );
   }
+}
+
+void openDeliveryDetails(context) async {
+  showModalBottomSheet<dynamic>(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(25.0))),
+      context: (context),
+      isDismissible: false,
+      isScrollControlled: true,
+      builder: (context) {
+        return Padding(
+          padding: MediaQuery.of(context).viewInsets,
+          child: DeliverAddress(),
+        );
+      });
+}
+
+void openPaymetMethods(context) async {
+  showModalBottomSheet<dynamic>(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(25.0))),
+      context: (context),
+      isDismissible: false,
+      isScrollControlled: true,
+      builder: (context) {
+        return Padding(
+          padding: MediaQuery.of(context).viewInsets,
+          child: SelectPaymentMethod(),
+        );
+      });
 }

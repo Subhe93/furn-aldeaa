@@ -48,7 +48,10 @@ class _EnterAdressState extends State<EnterAddress> {
                       Icons.close,
                       size: 30,
                     ),
-                    onPressed: null),
+                    onPressed: () => Navigator.pushReplacement(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) => HomeScreen()))),
               ],
             ),
           ),
