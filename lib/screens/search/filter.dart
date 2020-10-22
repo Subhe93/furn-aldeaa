@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:furn_aldeaa/widgets/CustomRadioButton.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/models/offer_model.dart';
 
 class Filter extends StatefulWidget {
   static String id = "filter";
@@ -232,37 +233,4 @@ class _FilterState extends State<Filter> {
       ),
     );
   }
-}
-
-class CostumRadioItem extends StatelessWidget {
-  final RadioModel _item;
-  CostumRadioItem(this._item);
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10.0, right: 10),
-      child: new Container(
-        height: 30,
-        width: 100,
-        child: Center(
-          child: Text(
-            _item.text,
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            border: Border.all(
-                width: _item.isSelected ? 10 : 3,
-                color: _item.isSelected ? yellow : Colors.grey)),
-      ),
-    );
-  }
-}
-
-class RadioModel {
-  bool isSelected;
-  final String text;
-
-  RadioModel(this.isSelected, this.text);
 }

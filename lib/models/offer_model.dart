@@ -24,7 +24,7 @@ class Resturant {
       this.deliveryFee});
 }
 
-class Dish{
+class Dish {
   String name;
   String image;
   double price;
@@ -32,37 +32,18 @@ class Dish{
   Dish({this.name, this.image, this.price});
 }
 
+class cartItemModel {
+  String name;
+  double price;
+  cartItemModel({this.name, this.price});
+}
+
 List<Dish> dishes = [
-  Dish(
-      name: "Classic Burger",
-
-      image: "images/دجاج مدخن.JPG",
-      price: 22.99
-
-  ),
-  Dish(
-      name: "Prosciutto",
-
-      image: "images/حمص.jpg",
-      price: 18.99
-
-  ),
-  Dish(
-      name: "pizza",
-
-      image: "images/بيتزا مارغريتا.jpg",
-      price: 22
-
-  ),
-  Dish(
-      name: "pizza",
-
-      image: "images/بيتزا مارغريتا.jpg",
-      price: 22
-
-  ),
+  Dish(name: "Classic Burger", image: "images/دجاج مدخن.JPG", price: 22.99),
+  Dish(name: "Prosciutto", image: "images/حمص.jpg", price: 18.99),
+  Dish(name: "pizza", image: "images/بيتزا مارغريتا.jpg", price: 22),
+  Dish(name: "pizza", image: "images/بيتزا مارغريتا.jpg", price: 22),
 ];
-
 
 List<Offer> offers = [
   Offer(
@@ -121,3 +102,10 @@ List<Resturant> resturantList = [
   resturant3,
   resturant4
 ];
+
+class RadioModel {
+  bool isSelected;
+  final String text;
+
+  RadioModel(this.isSelected, this.text);
+}

@@ -249,20 +249,18 @@ class RecentSearchTap extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Container(
             height: 150,
-            child: Expanded(
-              child: ListView(
-                children: [
-                  RecentSearchItem(
-                    text: "Burgers",
-                  ),
-                  RecentSearchItem(
-                    text: "Burgers",
-                  ),
-                  RecentSearchItem(
-                    text: "pizza",
-                  ),
-                ],
-              ),
+            child: ListView(
+              children: [
+                RecentSearchItem(
+                  text: "Burgers",
+                ),
+                RecentSearchItem(
+                  text: "Burgers",
+                ),
+                RecentSearchItem(
+                  text: "pizza",
+                ),
+              ],
             ),
           ),
         )

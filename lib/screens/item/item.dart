@@ -57,6 +57,17 @@ class _ItemState extends State<Item> {
                               ),
                             ),
                           ),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(25.0)),
+                                color: Colors.white,
+                              ),
+                              height: 30,
+                            ),
+                          )
                         ],
                       ),
                     )),
