@@ -109,3 +109,12 @@ class RadioModel {
 
   RadioModel(this.isSelected, this.text);
 }
+
+class OrderModel {
+  bool Delivered;
+  String Resturant;
+  double rating;
+  String image;
+
+  OrderModel(this.Delivered, this.Resturant, this.image, this.rating);
+}
