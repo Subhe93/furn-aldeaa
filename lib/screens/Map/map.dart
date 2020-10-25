@@ -113,7 +113,7 @@ void opensheet(context) async {
         return Padding(
           padding: MediaQuery.of(context).viewInsets,
           child: Container(
-            height: 150,
+            height: 120,
             child: InkWell(
               child: RestaurantMiniCard(),
               onTap: () => {openInfo(context)},

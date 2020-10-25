@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/screens/cart/cart.dart';
-import 'package:furn_aldeaa/screens/cart/emptyCart.dart';
+import 'package:furn_aldeaa/models/offer_model.dart';
 
 import 'package:furn_aldeaa/screens/components/drawer.dart';
 
@@ -9,6 +9,7 @@ import 'package:furn_aldeaa/screens/search/filter.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:furn_aldeaa/screens/search/search.dart';
 import 'components/body.dart';
+import 'components/offer_list.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -43,13 +45,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             body: Stack(children: [
-              SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Body(),
-                  ],
-                ),
+              CustomScrollView(
+                slivers: [
+                  SliverList(
+                      delegate: SliverChildListDelegate([
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Body(),
+                      ],
+                    ),
+                  ]))
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.only(

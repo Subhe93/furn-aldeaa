@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/checkout/screens/delivery_address.dart';
-import 'package:furn_aldeaa/screens/checkout/screens/payment_methods.dart';
-import 'package:furn_aldeaa/screens/enter_adress/enter_adress.dart';
+import 'package:furn_aldeaa/screens/checkout/screens/Select_payment_methods.dart';
 import 'package:furn_aldeaa/widgets/CustomRadioButton.dart';
 
 class Checkout extends StatefulWidget {

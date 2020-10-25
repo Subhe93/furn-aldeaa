@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:furn_aldeaa/screens/account/account_screen.dart';
+import 'package:furn_aldeaa/screens/enter_adress/enter_adress.dart';
+import 'package:furn_aldeaa/screens/favorites/favorites.dart';
 import 'package:furn_aldeaa/screens/orders/Orders.dart';
+import 'package:furn_aldeaa/screens/checkout/screens/Select_payment_methods.dart';
+import 'package:furn_aldeaa/screens/checkout/paymentMethods.dart';
 
 class DrawerMenu extends StatelessWidget {
   @override
@@ -92,7 +96,12 @@ class DrawerMenu extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) => Favorites()));
+                  },
                   leading: Icon(
                     Icons.favorite_border,
                   ),
@@ -106,7 +115,12 @@ class DrawerMenu extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) => EnterAddress()));
+                  },
                   leading: Icon(
                     Icons.add_location,
                   ),
@@ -120,7 +134,13 @@ class DrawerMenu extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                PaymentMethods()));
+                  },
                   leading: Icon(
                     Icons.monetization_on,
                   ),

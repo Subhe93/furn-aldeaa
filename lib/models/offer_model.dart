@@ -14,9 +14,13 @@ class Resturant {
   String price;
   String distance;
   String deliveryFee;
+  bool freeOffer;
+  bool favorite;
 
   Resturant(
-      {this.image,
+      {this.favorite,
+      this.freeOffer,
+      this.image,
       this.name,
       this.desc,
       this.price,
@@ -69,33 +73,41 @@ List<Offer> offers = [
 ];
 
 Resturant resturant1 = Resturant(
+    favorite: true,
     image: "images/IMG_2644.jpg",
     name: "The Pizza Factory",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery");
+    deliveryFee: "FREE Delivery",
+    freeOffer: false);
 Resturant resturant2 = Resturant(
     image: "images/IMG_2644.jpg",
     name: "The Pizza Factory",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery");
+    deliveryFee: "FREE Delivery",
+    favorite: false,
+    freeOffer: true);
 Resturant resturant3 = Resturant(
     image: "images/IMG_2644.jpg",
     name: "The Pizza Factory",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery");
+    deliveryFee: "FREE Delivery",
+    favorite: false,
+    freeOffer: false);
 Resturant resturant4 = Resturant(
     image: "images/IMG_2644.jpg",
     name: "The Pizza Factory",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery");
+    deliveryFee: "FREE Delivery",
+    favorite: false,
+    freeOffer: false);
 List<Resturant> resturantList = [
   resturant1,
   resturant2,

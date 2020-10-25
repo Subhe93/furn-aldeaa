@@ -30,7 +30,7 @@ class _OrdersState extends State<Orders> {
             height: 30,
           ),
           Container(
-            height: 50,
+            height: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

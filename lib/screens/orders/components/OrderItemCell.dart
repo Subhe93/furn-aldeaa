@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:furn_aldeaa/Constants.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 

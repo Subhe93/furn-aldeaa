@@ -23,155 +23,157 @@ class _SelectPaymentMethodState extends State<SelectPaymentMethod> {
   }
 
   Widget page2() {
-    return Container(
-      height: 600,
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 60,
-                child: FlatButton(
-                    onPressed: () => {
-                          setState(() => {currentView = 0})
-                        },
-                    child: Icon(Icons.arrow_back_ios_rounded)),
-              ),
-              Text(
-                "Add Card",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              ),
-              Container(
-                width: 60,
-                child: FlatButton(
-                    onPressed: () => {Navigator.pop(context)},
-                    child: Icon(Icons.cancel)),
-              )
-            ],
-          ),
-          Divider(
-            height: 5,
-          ),
-          inputField('Name on card', 'Enter Name here'),
-          SizedBox(height: 10),
-          customInput(FontAwesomeIcons.ccMastercard, Icons.camera_alt_outlined,
-              'Card Number', '****** 888'),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return SingleChildScrollView(
+      child: Container(
+        height: 600,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 90,
-                    decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.05),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                            width: 1, color: Colors.black.withOpacity(0.2))),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    'Expiry Date',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Text(
-                                    ' *',
-                                    style: TextStyle(color: Colors.red),
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Container(
-                                  width: 130,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        hintText: 'MM/YY',
-                                        border: InputBorder.none),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          Icon(
-                            Icons.info_outline_rounded,
-                            size: 30,
-                            color: Colors.black26,
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                Container(
+                  width: 60,
+                  child: FlatButton(
+                      onPressed: () => {
+                            setState(() => {currentView = 0})
+                          },
+                      child: Icon(Icons.arrow_back_ios_rounded)),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 90,
-                    decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.05),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                            width: 1, color: Colors.black.withOpacity(0.2))),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    'CVV',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Text(
-                                    ' *',
-                                    style: TextStyle(color: Colors.red),
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Container(
-                                  width: 130,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        hintText: '123',
-                                        border: InputBorder.none),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          Icon(
-                            Icons.info_outline_rounded,
-                            size: 30,
-                            color: Colors.black26,
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                Text(
+                  "Add Card",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  width: 60,
+                  child: FlatButton(
+                      onPressed: () => {Navigator.pop(context)},
+                      child: Icon(Icons.cancel)),
                 )
               ],
             ),
-          )
-        ],
+            Divider(
+              height: 5,
+            ),
+            inputField('Name on card', 'Enter Name here'),
+            SizedBox(height: 10),
+            customInput(FontAwesomeIcons.ccMastercard,
+                Icons.camera_alt_outlined, 'Card Number', '****** 888'),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 90,
+                      decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.05),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              width: 1, color: Colors.black.withOpacity(0.2))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      'Expiry Date',
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Text(
+                                      ' *',
+                                      style: TextStyle(color: Colors.red),
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10.0),
+                                  child: Container(
+                                    width: 130,
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                          hintText: 'MM/YY',
+                                          border: InputBorder.none),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Icon(
+                              Icons.info_outline_rounded,
+                              size: 30,
+                              color: Colors.black26,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 90,
+                      decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.05),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              width: 1, color: Colors.black.withOpacity(0.2))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      'CVV',
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Text(
+                                      ' *',
+                                      style: TextStyle(color: Colors.red),
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10.0),
+                                  child: Container(
+                                    width: 130,
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                          hintText: '123',
+                                          border: InputBorder.none),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Icon(
+                              Icons.info_outline_rounded,
+                              size: 30,
+                              color: Colors.black26,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

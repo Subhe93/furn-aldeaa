@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:furn_aldeaa/Constants.dart';
 import 'package:latlong/latlong.dart';
 
 class RestaurantInfoRivews extends StatefulWidget {
@@ -441,6 +440,7 @@ class RestaurantInfo extends StatelessWidget {
   }
 }
 
+// ignore: non_constant_identifier_names
 Widget CustomMarker(name) {
   return new Container(
     child: InkWell(

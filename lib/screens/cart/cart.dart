@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/cart/editItem.dart';
 import 'package:furn_aldeaa/screens/checkout/Checkout.dart';
-import 'package:furn_aldeaa/screens/item/item.dart';
-import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/widgets/popularDishs.dart';
 
 class Cart extends StatefulWidget {
