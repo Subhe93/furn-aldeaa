@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
+import 'package:furn_aldeaa/screens/checkout/screens/deliveryTime.dart';
 import 'package:furn_aldeaa/screens/checkout/screens/delivery_address.dart';
 import 'package:furn_aldeaa/screens/checkout/screens/Select_payment_methods.dart';
+
 import 'package:furn_aldeaa/widgets/CustomRadioButton.dart';
 
 class Checkout extends StatefulWidget {
@@ -206,56 +208,63 @@ class _CheckoutState extends State<Checkout> {
                             height: 5,
                           ),
                         ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(left: 15.0, right: 8.0),
-                          child: Container(
-                            height: 60,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(25),
-                                          color:
-                                              Colors.black12.withOpacity(0.1)),
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.location_on_outlined,
-                                          size: 25,
+                        InkWell(
+                          onTap: () => openDeliveryTime(context),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 15.0, right: 8.0),
+                            child: Container(
+                              height: 60,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 50,
+                                        width: 50,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            color: Colors.black12
+                                                .withOpacity(0.1)),
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.location_on_outlined,
+                                            size: 25,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text('Estimated Arrival',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black54)),
-                                        Text('ASAP (30 - 50) min',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black54))
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                Icon(Icons.arrow_forward_ios_rounded)
-                              ],
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text('Estimated Arrival',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black54)),
+                                          Text('ASAP (30 - 50) min',
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black54))
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                  InkWell(
+                                      onTap: () => openDeliveryTime(context),
+                                      child:
+                                          Icon(Icons.arrow_forward_ios_rounded))
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -468,6 +477,21 @@ void openPaymetMethods(context) async {
         return Padding(
           padding: MediaQuery.of(context).viewInsets,
           child: SelectPaymentMethod(),
+        );
+      });
+}
+
+void openDeliveryTime(context) async {
+  showModalBottomSheet<dynamic>(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(25.0))),
+      context: (context),
+      isDismissible: false,
+      isScrollControlled: true,
+      builder: (context) {
+        return Padding(
+          padding: MediaQuery.of(context).viewInsets,
+          child: DeliveryTime(),
         );
       });
 }

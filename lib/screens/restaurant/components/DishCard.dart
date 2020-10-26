@@ -18,7 +18,7 @@ class _DishCardState extends State<DishCard> {
     double height = MediaQuery.of(context).size.height;
     return InkWell(
       onTap: () => {
-        Navigator.pushReplacement(context,
+        Navigator.push(context,
             MaterialPageRoute(builder: (BuildContext context) => Item()))
       },
       child: Column(

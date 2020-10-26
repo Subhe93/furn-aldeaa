@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/Constants.dart';
-import 'package:furn_aldeaa/widgets/RoundedButton.dart';
 
 class Item extends StatefulWidget {
   static String id = 'item';
