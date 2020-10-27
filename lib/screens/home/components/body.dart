@@ -7,6 +7,7 @@ import 'package:furn_aldeaa/screens/home/components/offer_card.dart';
 import 'package:furn_aldeaa/screens/home/components/offer_list.dart';
 import 'package:furn_aldeaa/screens/home/components/restaurant_card.dart';
 import 'package:furn_aldeaa/screens/home/components/restaurant_list.dart';
+import 'package:furn_aldeaa/screens/home/components/topRestaurants.dart';
 
 import '../../../Constants.dart';
 
@@ -111,6 +112,97 @@ class Body extends StatelessWidget {
             ),
           ),
           RestaurantList(),
+          Padding(
+            padding:
+                const EdgeInsets.only(left: 18, right: 10, top: 15, bottom: 15),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: yellow.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(20)),
+              height: 100,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: yellow),
+                        child: Icon(
+                          Icons.attach_money,
+                          size: 30,
+                        )),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 8.0, top: 20, right: 8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Get 10\$',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Give a Friend \$10 to try joyfood and')
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.keyboard_arrow_right,
+                      size: 50,
+                      color: Colors.black54,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0, right: 15, top: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'Top 10 ',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Text('restaurants',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87))
+                  ],
+                ),
+                Text('See All',
+                    style: TextStyle(fontSize: 18, color: Colors.black26)),
+              ],
+            ),
+          ),
+          Container(
+            height: 360,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: resturantList.length,
+              itemBuilder: (context, index) => topRestaurantCard(
+                restaurant: resturantList[index],
+                press: () => {},
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 200,
+          )
         ],
       ),
     );

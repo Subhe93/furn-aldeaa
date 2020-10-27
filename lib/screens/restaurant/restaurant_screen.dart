@@ -42,36 +42,54 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              expandedHeight: 200,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Stack(
-                  children: [
-                    restaurantImage(
-                        height * 0.3, width, widget.restaurant.image),
-                    Positioned(
-                      top: 20,
-                      left: 20,
-                      child: Container(
-                        width: width * 0.9,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            roundIcon(
-                                35, 35, Colors.white, Icons.arrow_back_ios),
-                            Row(
-                              children: [
-                                roundIcon(
-                                    35, 35, Colors.white, Icons.info_outline),
-                                roundIcon(35, 35, Colors.white,
-                                    Icons.favorite_border),
-                              ],
-                            )
-                          ],
+            Theme(
+              data: ThemeData(primaryColor: Colors.white),
+              child: SliverAppBar(
+                expandedHeight: 220,
+                automaticallyImplyLeading: false,
+                flexibleSpace: FlexibleSpaceBar(
+                  background: Stack(
+                    children: [
+                      restaurantImage(
+                          height * 0.3, width, widget.restaurant.image),
+                      Positioned(
+                        top: 20,
+                        left: 20,
+                        child: Container(
+                          width: width * 0.9,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              InkWell(
+                                onTap: () => Navigator.pop(context),
+                                child: roundIcon(
+                                    35, 35, Colors.white, Icons.arrow_back_ios),
+                              ),
+                              Row(
+                                children: [
+                                  roundIcon(
+                                      35, 35, Colors.white, Icons.info_outline),
+                                  roundIcon(35, 35, Colors.white,
+                                      Icons.favorite_border),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(25.0)),
+                            color: Colors.white,
+                          ),
+                          height: 30,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

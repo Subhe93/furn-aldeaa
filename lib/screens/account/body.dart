@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../Constants.dart';
 
 class AccountBody extends StatefulWidget {
@@ -20,7 +20,43 @@ class _AccountBodyState extends State<AccountBody> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 170,
+                    height: 100,
+                  ),
+                  Stack(
+                    children: <Widget>[
+                      Container(
+                        height: 110,
+                        width: 100,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.black12),
+                        child: Stack(children: [
+                          Center(
+                            child: Icon(
+                              FontAwesomeIcons.userAlt,
+                              color: Colors.black54,
+                              size: 60,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle, color: yellow),
+                              child: Icon(
+                                Icons.edit,
+                                color: Colors.black54,
+                                size: 15,
+                              ),
+                            ),
+                          ),
+                        ]),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

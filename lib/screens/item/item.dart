@@ -29,6 +29,7 @@ class _ItemState extends State<Item> {
               slivers: [
                 SliverAppBar(
                     expandedHeight: 250,
+                    automaticallyImplyLeading: false,
                     flexibleSpace: FlexibleSpaceBar(
                       background: Stack(
                         children: [
