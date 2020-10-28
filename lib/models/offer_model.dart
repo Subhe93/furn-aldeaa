@@ -53,33 +53,23 @@ List<Offer> offers = [
   Offer(
       name: "pizza",
       offerText: "1 + 1 FREE",
-      image: "images/بيتزا مارغريتا.jpg",
+      image: "images/Group 3667.png",
       resturantsList: resturantList),
   Offer(
-      name: "pizza",
-      offerText: "1 + 1 FREE",
-      image: "images/بيتزا مارغريتا.jpg",
-      resturantsList: resturantList),
-  Offer(
-      name: "pizza",
-      offerText: "1 + 1 FREE",
-      image: "images/بيتزا مارغريتا.jpg",
-      resturantsList: resturantList),
-  Offer(
-      name: "pizza",
-      offerText: "1 + 1 FREE",
+      name: "Epic",
+      offerText: "Deals",
       image: "images/بيتزا مارغريتا.jpg",
       resturantsList: resturantList),
 ];
 
 Resturant resturant1 = Resturant(
     favorite: true,
-    image: "images/IMG_2644.jpg",
-    name: "The Pizza Factory",
+    image: "images/بيتزا الضيعة.JPG",
+    name: "Somked Chicken",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "\$3.55 Delivery",
     freeOffer: false);
 Resturant resturant2 = Resturant(
     image: "images/IMG_2644.jpg",
@@ -91,8 +81,8 @@ Resturant resturant2 = Resturant(
     favorite: false,
     freeOffer: true);
 Resturant resturant3 = Resturant(
-    image: "images/IMG_2644.jpg",
-    name: "The Pizza Factory",
+    image: "images/سلطة الباستا.jpg",
+    name: "Pasta Salad",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
@@ -100,20 +90,51 @@ Resturant resturant3 = Resturant(
     favorite: false,
     freeOffer: false);
 Resturant resturant4 = Resturant(
-    image: "images/IMG_2644.jpg",
-    name: "The Pizza Factory",
+    image: "images/بيتزا الرانش.jpg",
+    name: "Amigos Grill & BBG ",
     desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
     price: "\$10",
     distance: "30-50 m",
     deliveryFee: "FREE Delivery",
     favorite: false,
     freeOffer: false);
+
+Resturant resturant5 = Resturant(
+    image: "images/كبة.jpg",
+    name: "Ancient Dragon",
+    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    price: "\$10",
+    distance: "30-50 m",
+    deliveryFee: "FREE Delivery",
+    favorite: false,
+    freeOffer: false);
+Resturant resturant6 = Resturant(
+    image: "images/كبة.jpg",
+    name: "Ancient Dragon",
+    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    price: "\$10",
+    distance: "30-50 m",
+    deliveryFee: "FREE Delivery",
+    favorite: false,
+    freeOffer: false);
+Resturant resturant7 = Resturant(
+    image: "images/كبة.jpg",
+    name: "Ancient Dragon",
+    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    price: "\$10",
+    distance: "30-50 m",
+    deliveryFee: "FREE Delivery",
+    favorite: false,
+    freeOffer: false);
+
 List<Resturant> resturantList = [
   resturant1,
   resturant2,
   resturant3,
   resturant4
 ];
+
+List<Resturant> resturantList1 = [resturant5, resturant6, resturant7];
 
 class RadioModel {
   bool isSelected;

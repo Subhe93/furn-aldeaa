@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:furn_aldeaa/Screens/enter_adress/enter_adress.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/screens/home/home_screen.dart';
 import 'package:furn_aldeaa/widgets/RoundedButton.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -52,7 +53,8 @@ class _GetStartedState extends State<GetStarted> {
                           width: 60,
                         ),
                         Text(
-                          "lets get started",
+                          Applocalizations.of(context)
+                              .translate('lets get started'),
                           style: TextStyle(
                               color: brown,
                               fontSize: 18,

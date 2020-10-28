@@ -14,8 +14,10 @@ class PastOrders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Expanded(
       child: Container(
+        width: width,
         child: ListView.builder(
           itemCount: pastOrders.length,
           itemBuilder: (context, index) {

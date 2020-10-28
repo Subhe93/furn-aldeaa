@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/offers/offer_screen.dart';
 
-
 class OfferCard extends StatelessWidget {
-
   final Function press;
   final Offer offer;
   const OfferCard({
     Key key,
-   this.offer,
+    this.offer,
     this.press,
   }) : super(key: key);
 
@@ -19,7 +17,7 @@ class OfferCard extends StatelessWidget {
     // This size provide you the total height and width of the screen
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: width*0.6,
+      width: width * 0.6,
       margin: EdgeInsets.only(left: 20, right: 0, top: 10, bottom: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -40,7 +38,7 @@ class OfferCard extends StatelessWidget {
             child: Stack(
               children: [
                 Container(
-                  width: width*0.6,
+                  width: width * 0.6,
                   height: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -56,31 +54,34 @@ class OfferCard extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: width*0.6,
+                  width: width * 0.6,
                   height: 200,
                   decoration: BoxDecoration(
                     color: Colors.black26.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                Container(
-                  width: 100,
-                  height: 200,
-                  child: Center(
-                    child: Text(
-                      offer.name,
-                      maxLines: 2,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                        shadows: <Shadow>[
-                          Shadow(
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 3.0,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                          ),
-                        ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Container(
+                    width: 100,
+                    height: 200,
+                    child: Center(
+                      child: Text(
+                        offer.name + "\n" + offer.offerText,
+                        maxLines: 2,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          shadows: <Shadow>[
+                            Shadow(
+                              offset: Offset(2.0, 2.0),
+                              blurRadius: 3.0,
+                              color: Color.fromARGB(255, 0, 0, 0),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

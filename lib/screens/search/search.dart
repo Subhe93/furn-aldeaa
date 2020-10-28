@@ -15,7 +15,7 @@ class _searchState extends State<search> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 650,
+      height: 620,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,19 +91,16 @@ class SearchResultsTap extends StatelessWidget {
                 children: [
                   RestaurantCell(
                     name: 'The Pizza Factory',
+                    image: 'images/بيتزا مارغريتا.jpg',
                   ),
                   RestaurantCell(
-                    name: 'The Pizza Factory',
+                    name: 'Islan Pizzeria',
+                    image: 'images/طوشكا.jpg',
                   ),
                   RestaurantCell(
-                    name: 'The Pizza Factory',
+                    name: 'Pizza Kingdom',
+                    image: 'images/IMG_2644.jpg',
                   ),
-                  RestaurantCell(
-                    name: 'The Pizza Factory',
-                  ),
-                  RestaurantCell(
-                    name: 'The Pizza Factory',
-                  )
                 ],
               ),
             )),
@@ -127,16 +124,6 @@ class SearchResultsTap extends StatelessWidget {
             child: Expanded(
               child: ListView(
                 children: [
-                  DishCell(
-                    name: 'Quattro Formaggi Pizza ',
-                    restaurant: 'The Pizza Factory',
-                    price: '19.00',
-                  ),
-                  DishCell(
-                    name: 'Quattro Formaggi Pizza ',
-                    restaurant: 'The Pizza Factory',
-                    price: '19.00',
-                  ),
                   DishCell(
                     name: 'Quattro Formaggi Pizza ',
                     restaurant: 'The Pizza Factory',
@@ -200,9 +187,10 @@ class DishCell extends StatelessWidget {
 }
 
 class RestaurantCell extends StatelessWidget {
-  String name;
+  final String name;
+  final String image;
 
-  RestaurantCell({this.name});
+  RestaurantCell({this.name, this.image});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -215,7 +203,7 @@ class RestaurantCell extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                    image: AssetImage('images/طوشكا.jpg'), fit: BoxFit.cover)),
+                    image: AssetImage(image), fit: BoxFit.cover)),
           ),
           SizedBox(
             width: 5,

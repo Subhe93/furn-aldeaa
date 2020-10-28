@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/screens/cart/cart.dart';
-import 'package:furn_aldeaa/models/offer_model.dart';
 
 import 'package:furn_aldeaa/screens/components/drawer.dart';
 
@@ -9,7 +8,6 @@ import 'package:furn_aldeaa/screens/search/filter.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:furn_aldeaa/screens/search/search.dart';
 import 'components/body.dart';
-import 'components/offer_list.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

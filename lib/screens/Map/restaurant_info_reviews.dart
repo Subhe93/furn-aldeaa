@@ -19,7 +19,7 @@ class _RestaurantInfoRivewsState extends State<RestaurantInfoRivews> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 650,
+      height: 620,
       child: Column(
         children: [
           Container(

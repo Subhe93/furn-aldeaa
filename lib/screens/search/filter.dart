@@ -25,7 +25,7 @@ class _FilterState extends State<Filter> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 650,
+      height: 620,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

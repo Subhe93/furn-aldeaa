@@ -19,6 +19,7 @@ class _FavoritesState extends State<Favorites> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -54,25 +55,28 @@ class _FavoritesState extends State<Favorites> {
             height: 5,
           ),
           Expanded(
-            child: ListView.builder(
-              itemCount: restaurants.length,
-              itemBuilder: (context, index) {
-                return Slidable(
-                  child: restaurants[index],
-                  actionExtentRatio: 0.25,
-                  actionPane: SlidableDrawerActionPane(),
-                  secondaryActions: [
-                    IconSlideAction(
-                      caption: 'Delete',
-                      color: Colors.red,
-                      icon: Icons.delete,
-                      onTap: () => {
-                        setState(() => {restaurants.removeAt(index)})
-                      },
-                    ),
-                  ],
-                );
-              },
+            child: Container(
+              width: width,
+              child: ListView.builder(
+                itemCount: restaurants.length,
+                itemBuilder: (context, index) {
+                  return Slidable(
+                    child: restaurants[index],
+                    actionExtentRatio: 0.25,
+                    actionPane: SlidableDrawerActionPane(),
+                    secondaryActions: [
+                      IconSlideAction(
+                        caption: 'Delete',
+                        color: Colors.red,
+                        icon: Icons.delete,
+                        onTap: () => {
+                          setState(() => {restaurants.removeAt(index)})
+                        },
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ),
         ],

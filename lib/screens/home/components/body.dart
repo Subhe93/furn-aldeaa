@@ -193,9 +193,9 @@ class Body extends StatelessWidget {
             height: 360,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: resturantList.length,
+              itemCount: resturantList1.length,
               itemBuilder: (context, index) => topRestaurantCard(
-                restaurant: resturantList[index],
+                restaurant: resturantList1[index],
                 press: () => {},
               ),
             ),
