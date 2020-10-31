@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/cart/editItem.dart';
 import 'package:furn_aldeaa/screens/checkout/Checkout.dart';
@@ -15,7 +16,7 @@ class Cart extends StatefulWidget {
 
 class _CartState extends State<Cart> {
   List<cartItemModel> cartItems = [
-    cartItemModel(name: 'Quattro Formaggi Pizza', price: 29.99),
+    cartItemModel(name: "بيتزا الضيعة", price: 29.99),
   ];
 
   @override
@@ -37,7 +38,10 @@ class _CartState extends State<Cart> {
                       width: 60,
                     ),
                     Text(
-                      "Your Cart - The Pizza Factory",
+                      Applocalizations.of(context).translate("Your Cart") +
+                          "-" +
+                          Applocalizations.of(context)
+                              .translate("The Pizza Factory"),
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -83,7 +87,8 @@ class _CartState extends State<Cart> {
                           width: 30,
                         ),
                         Text(
-                          'Add more items',
+                          Applocalizations.of(context)
+                              .translate("Add More Items"),
                           style: TextStyle(fontSize: 20, color: Colors.black54),
                         )
                       ],
@@ -110,7 +115,8 @@ class _CartState extends State<Cart> {
                           width: 30,
                         ),
                         Text(
-                          'Add more Code',
+                          Applocalizations.of(context)
+                              .translate("Add more code"),
                           style: TextStyle(fontSize: 20, color: Colors.black54),
                         )
                       ],
@@ -138,7 +144,8 @@ class _CartState extends State<Cart> {
                           border: InputBorder.none,
                           contentPadding: EdgeInsets.symmetric(
                               vertical: 5.0, horizontal: 5.0),
-                          hintText: 'Add Instructions (eg. no onions)'),
+                          hintText: Applocalizations.of(context)
+                              .translate('Add Instructions (eg. no onions)')),
                     ),
                   ),
                 ),
@@ -156,7 +163,7 @@ class _CartState extends State<Cart> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Subtotal',
+                        Text(Applocalizations.of(context).translate('Subtotal'),
                             style:
                                 TextStyle(fontSize: 17, color: Colors.black54)),
                         Text('\$29.22',
@@ -170,7 +177,7 @@ class _CartState extends State<Cart> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Subtotal',
+                        Text(Applocalizations.of(context).translate('Subtotal'),
                             style:
                                 TextStyle(fontSize: 17, color: Colors.black54)),
                         Text('\$29.22',
@@ -184,7 +191,7 @@ class _CartState extends State<Cart> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Total',
+                        Text(Applocalizations.of(context).translate('Total'),
                             style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.black87,
@@ -220,7 +227,8 @@ class _CartState extends State<Cart> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Go to Checkout',
+                            Applocalizations.of(context)
+                                .translate("Go to Checkout"),
                             style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
@@ -297,14 +305,15 @@ class _CartItemState extends State<CartItem> {
           ),
         ),
         Container(
-          height: 150,
+          height: 160,
           decoration: BoxDecoration(color: Colors.black.withOpacity(0.1)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8, top: 5),
-                child: Text('Popular with Order'),
+                child: Text(Applocalizations.of(context)
+                    .translate("Popular with Order")),
               ),
               Container(
                 height: 120,
@@ -312,7 +321,7 @@ class _CartItemState extends State<CartItem> {
                   padding: const EdgeInsets.only(left: 8),
                   child: ListView(
                     scrollDirection: Axis.horizontal,
-                    children: [PopularDish(), PopularDish()],
+                    children: [PopularDish(context), PopularDish(context)],
                   ),
                 ),
               ),

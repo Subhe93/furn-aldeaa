@@ -76,7 +76,7 @@ class _DishCardState extends State<DishCard> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 30.0),
+            padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Container(
               width: width * 0.6,
               child: Column(

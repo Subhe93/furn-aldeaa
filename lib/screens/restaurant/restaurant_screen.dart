@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/restaurant/components/dishes_list.dart';
 import 'package:furn_aldeaa/widgets/restaurantImage.dart';
@@ -17,22 +18,67 @@ class RestaurantScreen extends StatefulWidget {
 
 class _RestaurantScreenState extends State<RestaurantScreen> {
   List<ProductCell> offers = [
-    ProductCell(),
+    ProductCell(
+        product: Product(
+            title: "مجاني ١+١",
+            descriptions: "اطلب بيتزا وخذ الاخرى مجانا",
+            price: "20",
+            image: "images/Group 3667.png")),
   ];
   List<ProductCell> Pizza = [
-    ProductCell(),
-    ProductCell(),
-    ProductCell(),
-    ProductCell(),
-    ProductCell(),
+    ProductCell(
+      product: Product(
+          title: 'بيتزا الضيعه',
+          descriptions: "عيجنة ايطالية،صلصة الطماطم،جبنة فرنسية",
+          price: "22",
+          image: "images/بيتزا الضيعة.JPG"),
+    ),
+    ProductCell(
+      product: Product(
+          title: 'بيتزاالرانش',
+          descriptions: "عيجنة ايطالية،موزريلا،جبنة ،ببروني",
+          price: "30",
+          image: "images/بيتزا الرانش.jpg"),
+    ),
+    ProductCell(
+      product: Product(
+          title: "بيتزا الدجاج",
+          descriptions: "موزريلا،شرائح دجاج،عجينة ايطالية،صلصة",
+          price: "22",
+          image: "images/بيتزا الدجاج.jpg"),
+    ),
   ];
   List<ProductCell> pies = [
-    ProductCell(),
-    ProductCell(),
-    ProductCell(),
+    ProductCell(
+      product: Product(
+          title: "طوشكا",
+          descriptions: "شرئح اللحم،جبنة الشيدر،صلصة",
+          price: "22",
+          image: "images/طوشكا.jpg"),
+    ),
+    ProductCell(
+      product: Product(
+          title: "طوشكا",
+          descriptions: "شرئح اللحم،جبنة الشيدر،صلصة",
+          price: "22",
+          image: "images/طوشكا.jpg"),
+    ),
+    ProductCell(
+      product: Product(
+          title: "زعتر",
+          descriptions: "زعتر،جبنة",
+          price: "22",
+          image: "images/زعتر.jpg"),
+    ),
   ];
   List<ProductCell> salad = [
-    ProductCell(),
+    ProductCell(
+      product: Product(
+          title: "سلطة الباستا",
+          descriptions: "جبنة يونانية،خيار،باستا",
+          price: "22",
+          image: "images/سلطة الباستا.jpg"),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -96,12 +142,12 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             SliverList(
                 delegate: SliverChildListDelegate([
               Padding(
-                padding: const EdgeInsets.only(top: 10, left: 10),
+                padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
+                      padding: const EdgeInsets.only(left: 10.0, right: 10),
                       child: Text(
                         widget.restaurant.name,
                         maxLines: 1,
@@ -116,31 +162,34 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                     SizedBox(
                       height: 5,
                     ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 20,
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Text(
-                          widget.restaurant.desc,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.black,
-                              letterSpacing: 0.8),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0, right: 8),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow,
+                            size: 20,
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Text(
+                            widget.restaurant.desc,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.black,
+                                letterSpacing: 0.8),
+                          ),
+                        ],
+                      ),
                     ),
                     Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             children: [
                               Text(
@@ -148,7 +197,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 15),
                               ),
-                              Text('Minutes',
+                              Text(
+                                  Applocalizations.of(context)
+                                      .translate("Minutes"),
                                   style: TextStyle(
                                       fontWeight: FontWeight.normal,
                                       color: kTextColor,
@@ -157,7 +208,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             children: [
                               Text(
@@ -165,7 +216,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 15),
                               ),
-                              Text('Minimum',
+                              Text(
+                                  Applocalizations.of(context)
+                                      .translate("Minimum"),
                                   style: TextStyle(
                                       fontWeight: FontWeight.normal,
                                       color: kTextColor,
@@ -202,18 +255,18 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 12.0, top: 12),
+                padding: const EdgeInsets.only(left: 12.0, top: 12, right: 12),
                 child: Row(
                   children: [
                     Text(
-                      "Featured",
+                      Applocalizations.of(context).translate("Featured"),
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Text(
-                      "5 Items",
+                      "5" + Applocalizations.of(context).translate("Items"),
                       style: TextStyle(color: ksecondaryColor, fontSize: 20),
                     ),
                   ],
@@ -222,7 +275,10 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               SizedBox(
                 height: 10,
               ),
-              Container(height: 250, child: DishesList()),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Container(height: 250, child: DishesList()),
+              ),
               Container(
                 height: 10,
                 color: Colors.black12.withOpacity(0.03),
@@ -232,13 +288,13 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
-                  'Offers',
+                  Applocalizations.of(context).translate("Offers"),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
               ListView.builder(
                 itemCount: offers.length,
-                itemBuilder: (context, index) => ProductCell(),
+                itemBuilder: (context, index) => offers[index],
                 shrinkWrap: true,
                 physics: ClampingScrollPhysics(),
               ),
@@ -251,7 +307,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 child: Row(
                   children: [
                     Text(
-                      'Pizza',
+                      Applocalizations.of(context).translate('Pizza'),
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
@@ -259,7 +315,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                       width: 10,
                     ),
                     Text(
-                      Pizza.length.toString() + ' Items',
+                      Pizza.length.toString() +
+                          " " +
+                          Applocalizations.of(context).translate('Items'),
                       style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 20,
@@ -270,7 +328,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
               ListView.builder(
                 itemCount: Pizza.length,
-                itemBuilder: (context, index) => ProductCell(),
+                itemBuilder: (context, index) => Pizza[index],
                 shrinkWrap: true,
                 physics: ClampingScrollPhysics(),
               ),
@@ -280,7 +338,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 child: Row(
                   children: [
                     Text(
-                      'Pies',
+                      Applocalizations.of(context).translate("Pies"),
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
@@ -288,7 +346,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                       width: 10,
                     ),
                     Text(
-                      pies.length.toString() + ' Items',
+                      pies.length.toString() +
+                          " " +
+                          Applocalizations.of(context).translate('Items'),
                       style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 20,
@@ -300,7 +360,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
 
               ListView.builder(
                 itemCount: pies.length,
-                itemBuilder: (context, index) => ProductCell(),
+                itemBuilder: (context, index) => pies[index],
                 shrinkWrap: true,
                 physics: ClampingScrollPhysics(),
               ),
@@ -310,7 +370,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 child: Row(
                   children: [
                     Text(
-                      'Salad',
+                      Applocalizations.of(context).translate("Salad"),
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
@@ -318,7 +378,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                       width: 10,
                     ),
                     Text(
-                      salad.length.toString() + ' Items',
+                      salad.length.toString() +
+                          " " +
+                          Applocalizations.of(context).translate('Items'),
                       style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 20,
@@ -329,7 +391,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
               ListView.builder(
                 itemCount: salad.length,
-                itemBuilder: (context, index) => ProductCell(),
+                itemBuilder: (context, index) => salad[index],
                 shrinkWrap: true,
                 physics: ClampingScrollPhysics(),
               ),

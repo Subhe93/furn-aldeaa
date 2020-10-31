@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/Constants.dart';
@@ -86,17 +87,18 @@ class _ItemState extends State<Item> {
                             height: 10,
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Text(
-                              'Hot dogs Pizza',
+                              'بيتزا الدجاج',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 30),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Text(
-                              'Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs',
+                              Applocalizations.of(context).translate(
+                                  "Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs"),
                               style: TextStyle(fontSize: 15),
                             ),
                           ),
@@ -113,7 +115,9 @@ class _ItemState extends State<Item> {
                           Theme(
                             data: ThemeData(accentColor: Colors.black),
                             child: ExpansionTile(
-                              title: Text('VARIATION',
+                              title: Text(
+                                  Applocalizations.of(context)
+                                      .translate("VARIATION"),
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                               children: [
@@ -129,7 +133,8 @@ class _ItemState extends State<Item> {
                                       children: [
                                         _myRadioButton(
                                           isBold: false,
-                                          title: "Small - 24 cm",
+                                          title: Applocalizations.of(context)
+                                              .translate("Small - 24 cm"),
                                           value: 0,
                                           groupValue: _variationValue,
                                           onChanged: (newValue) => setState(
@@ -145,7 +150,8 @@ class _ItemState extends State<Item> {
                                         ),
                                         _myRadioButton(
                                           isBold: false,
-                                          title: "Medium - 32 cm",
+                                          title: Applocalizations.of(context)
+                                              .translate("Medium - 32 cm"),
                                           value: 1,
                                           groupValue: _variationValue,
                                           onChanged: (newValue) => setState(
@@ -161,7 +167,8 @@ class _ItemState extends State<Item> {
                                         ),
                                         _myRadioButton(
                                           isBold: false,
-                                          title: "Larg -  42 cm",
+                                          title: Applocalizations.of(context)
+                                              .translate("Larg -  42 cm"),
                                           value: 2,
                                           groupValue: _variationValue,
                                           onChanged: (newValue) => setState(
@@ -184,7 +191,9 @@ class _ItemState extends State<Item> {
                           Theme(
                             data: ThemeData(accentColor: Colors.black),
                             child: ExpansionTile(
-                              title: Text('Extra Toppings',
+                              title: Text(
+                                  Applocalizations.of(context)
+                                      .translate("Extra Toppings"),
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                               children: [
@@ -215,7 +224,9 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Peperoncino',
+                                                    Applocalizations.of(context)
+                                                        .translate(
+                                                            'Peperoncino'),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -250,7 +261,9 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Peperoncino',
+                                                    Applocalizations.of(context)
+                                                        .translate(
+                                                            'Peperoncino'),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -285,7 +298,8 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Mashrooms',
+                                                    Applocalizations.of(context)
+                                                        .translate("Mashrooms"),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -320,7 +334,8 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Olives',
+                                                    Applocalizations.of(context)
+                                                        .translate("Olives"),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -352,7 +367,9 @@ class _ItemState extends State<Item> {
                           Theme(
                             data: ThemeData(accentColor: Colors.black),
                             child: ExpansionTile(
-                              title: Text('EXTRA SAUSE',
+                              title: Text(
+                                  Applocalizations.of(context)
+                                      .translate("Extra Sause"),
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                               children: [
@@ -383,7 +400,9 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Tomato Sause',
+                                                    Applocalizations.of(context)
+                                                        .translate(
+                                                            "Tomato Sause"),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -418,7 +437,9 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Spicy Ketschup',
+                                                    Applocalizations.of(context)
+                                                        .translate(
+                                                            "Spicy Katchup"),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -453,7 +474,9 @@ class _ItemState extends State<Item> {
                                                         });
                                                       }),
                                                   Text(
-                                                    'Sweet Ketchup',
+                                                    Applocalizations.of(context)
+                                                        .translate(
+                                                            "Sweet Katchup"),
                                                     style:
                                                         TextStyle(fontSize: 18),
                                                   )
@@ -498,8 +521,9 @@ class _ItemState extends State<Item> {
                                       border: InputBorder.none,
                                       contentPadding: EdgeInsets.symmetric(
                                           vertical: 5.0, horizontal: 5.0),
-                                      hintText:
-                                          'Add Instructions (eg. no onions)'),
+                                      hintText: Applocalizations.of(context)
+                                          .translate(
+                                              "Add Instructions (eg. no onions)")),
                                 ),
                               ),
                             ),
@@ -519,7 +543,9 @@ class _ItemState extends State<Item> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text('QUANTITY',
+                                  Text(
+                                      Applocalizations.of(context)
+                                          .translate("Quantity"),
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold)),
                                   Row(
@@ -600,7 +626,8 @@ class _ItemState extends State<Item> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Add to cart',
+                            Applocalizations.of(context)
+                                .translate("Add To Cart"),
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),

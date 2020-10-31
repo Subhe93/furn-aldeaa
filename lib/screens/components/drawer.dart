@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/screens/account/account_screen.dart';
 import 'package:furn_aldeaa/screens/enter_adress/enter_adress.dart';
 import 'package:furn_aldeaa/screens/favorites/favorites.dart';
@@ -54,7 +55,7 @@ class DrawerMenu extends StatelessWidget {
                       bottomRight: const Radius.circular(40.0)),
                   border: Border.all(color: Colors.black)),
               child: Text(
-                'Edit Account',
+                Applocalizations.of(context).translate("Edit Account"),
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
@@ -87,7 +88,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.bookmark_border,
                   ),
                   title: Text(
-                    'Orders',
+                    Applocalizations.of(context).translate("Orders"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -106,7 +107,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.favorite_border,
                   ),
                   title: Text(
-                    'Favorites',
+                    Applocalizations.of(context).translate("Favorites"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -125,7 +126,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.add_location,
                   ),
                   title: Text(
-                    'Addresses',
+                    Applocalizations.of(context).translate("Addresses"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -145,7 +146,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.monetization_on,
                   ),
                   title: Text(
-                    'Payment methods',
+                    Applocalizations.of(context).translate("Payment methods"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -159,7 +160,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.bookmark,
                   ),
                   title: Text(
-                    'Promotions',
+                    Applocalizations.of(context).translate("Promotions"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -173,7 +174,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.card_giftcard,
                   ),
                   title: Text(
-                    'Invite friends',
+                    Applocalizations.of(context).translate("Invite friends"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -187,7 +188,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.help,
                   ),
                   title: Text(
-                    'Help',
+                    Applocalizations.of(context).translate("Help"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -201,7 +202,7 @@ class DrawerMenu extends StatelessWidget {
                     Icons.message,
                   ),
                   title: Text(
-                    'Contact Us',
+                    Applocalizations.of(context).translate("Contact Us"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,
@@ -219,7 +220,7 @@ class DrawerMenu extends StatelessWidget {
                     color: Colors.red,
                   ),
                   title: Text(
-                    'Log out',
+                    Applocalizations.of(context).translate("Log out"),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: textSize,

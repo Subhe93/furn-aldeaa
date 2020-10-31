@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class editItem extends StatefulWidget {
   static String id = 'edit_item';
@@ -27,7 +28,7 @@ class _editItemState extends State<editItem> {
                 width: 60,
               ),
               Text(
-                "Quattro Formaggi Pizza",
+                "بيتزا الضيعة",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -57,7 +58,9 @@ class _editItemState extends State<editItem> {
                 Theme(
                   data: ThemeData(accentColor: Colors.black),
                   child: ExpansionTile(
-                    title: Text('EXTRA TOPPINGS',
+                    title: Text(
+                        Applocalizations.of(context)
+                            .translate("EXTRA TOPPINGS"),
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     children: [
                       Divider(
@@ -85,7 +88,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Peperoncino',
+                                          Applocalizations.of(context)
+                                              .translate("Peperoncino"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -116,7 +120,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Peperoncino',
+                                          Applocalizations.of(context)
+                                              .translate("Peperoncino"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -147,7 +152,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Mashrooms',
+                                          Applocalizations.of(context)
+                                              .translate("Mashrooms"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -178,7 +184,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Olives',
+                                          Applocalizations.of(context)
+                                              .translate("Olives"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -208,7 +215,8 @@ class _editItemState extends State<editItem> {
                 Theme(
                   data: ThemeData(accentColor: Colors.black),
                   child: ExpansionTile(
-                    title: Text('EXTRA SAUSE',
+                    title: Text(
+                        Applocalizations.of(context).translate("EXTRA SAUSE"),
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     children: [
                       Divider(
@@ -236,7 +244,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Tomato Sause',
+                                          Applocalizations.of(context)
+                                              .translate("Tomato Sause"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -267,7 +276,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Spicy Ketschup',
+                                          Applocalizations.of(context)
+                                              .translate("Spicy Ketschup"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -298,7 +308,8 @@ class _editItemState extends State<editItem> {
                                               });
                                             }),
                                         Text(
-                                          'Sweet Ketchup',
+                                          Applocalizations.of(context)
+                                              .translate("Sweet Ketchup"),
                                           style: TextStyle(fontSize: 18),
                                         )
                                       ],
@@ -338,7 +349,8 @@ class _editItemState extends State<editItem> {
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.symmetric(
                                 vertical: 5.0, horizontal: 5.0),
-                            hintText: 'Add Instructions (eg. no onions)'),
+                            hintText: Applocalizations.of(context)
+                                .translate("Add Instructions (eg. no onions)")),
                       ),
                     ),
                   ),
@@ -357,7 +369,7 @@ class _editItemState extends State<editItem> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('QUANTITY',
+                        Text(Applocalizations.of(context).translate("QUANTITY"),
                             style: TextStyle(fontWeight: FontWeight.bold)),
                         Row(
                           children: [
@@ -413,7 +425,8 @@ class _editItemState extends State<editItem> {
                         child: Padding(
                           padding: const EdgeInsets.all(30),
                           child: Text(
-                            'Remove From Cart',
+                            Applocalizations.of(context)
+                                .translate("Remove From Cart"),
                             style: TextStyle(fontSize: 20, color: Colors.red),
                           ),
                         ),
@@ -437,7 +450,8 @@ class _editItemState extends State<editItem> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        'Update Cart',
+                                        Applocalizations.of(context)
+                                            .translate("Update Cart"),
                                         style: TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold),

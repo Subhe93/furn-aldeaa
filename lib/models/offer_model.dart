@@ -43,87 +43,91 @@ class cartItemModel {
 }
 
 List<Dish> dishes = [
-  Dish(name: "Classic Burger", image: "images/دجاج مدخن.JPG", price: 22.99),
-  Dish(name: "Prosciutto", image: "images/حمص.jpg", price: 18.99),
-  Dish(name: "pizza", image: "images/بيتزا مارغريتا.jpg", price: 22),
-  Dish(name: "pizza", image: "images/بيتزا مارغريتا.jpg", price: 22),
+  Dish(name: " دجاج مدخن", image: "images/دجاج مدخن.JPG", price: 22.99),
+  Dish(name: "حمص ناعم", image: "images/حمص.jpg", price: 18.99),
+  Dish(name: "بيتزا مارغاريتا", image: "images/بيتزا مارغريتا.jpg", price: 22),
 ];
 
 List<Offer> offers = [
   Offer(
-      name: "pizza",
-      offerText: "1 + 1 FREE",
+      name: "بيتزا",
+      offerText: "1 + 1 مجاني",
       image: "images/Group 3667.png",
       resturantsList: resturantList),
   Offer(
-      name: "Epic",
-      offerText: "Deals",
+      name: "بيتزا",
+      offerText: "تخفيض ٥٠٪",
       image: "images/بيتزا مارغريتا.jpg",
+      resturantsList: resturantList),
+  Offer(
+      name: "تحلية",
+      offerText: "تخفيض ٣٠٪",
+      image: "images/كيكة العسل.jpg",
       resturantsList: resturantList),
 ];
 
 Resturant resturant1 = Resturant(
     favorite: true,
     image: "images/بيتزا الضيعة.JPG",
-    name: "Somked Chicken",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    name: "بيتزا الضيعة",
+    desc: "4.6 (1K+) - \$\$\$ - بيتزا",
     price: "\$10",
     distance: "30-50 m",
     deliveryFee: "\$3.55 Delivery",
     freeOffer: false);
 Resturant resturant2 = Resturant(
-    image: "images/IMG_2644.jpg",
-    name: "The Pizza Factory",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    image: "images/سوشي رول.jpg",
+    name: "سوشي رول",
+    desc: "4.6 (1K+) - \$\$\$ -مأكولات بحريه",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "لايوجد توصيل",
     favorite: false,
-    freeOffer: true);
+    freeOffer: false);
 Resturant resturant3 = Resturant(
     image: "images/سلطة الباستا.jpg",
-    name: "Pasta Salad",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    name: "سلطة الباستا",
+    desc: "4.6 (1K+) - \$\$\$ - سلطة",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "توصيل مجاني",
     favorite: false,
     freeOffer: false);
 Resturant resturant4 = Resturant(
     image: "images/بيتزا الرانش.jpg",
-    name: "Amigos Grill & BBG ",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    name: "بيتزا الرانش",
+    desc: "4.6 (1K+) - \$\$\$ - معجنات-بيتزا",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "توصيل مجاني",
     favorite: false,
     freeOffer: false);
 
 Resturant resturant5 = Resturant(
     image: "images/كبة.jpg",
-    name: "Ancient Dragon",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    name: "كبة",
+    desc: "4.6 (1K+) - \$\$\$ -ماكولات عربية",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "توصيل مجاني",
     favorite: false,
     freeOffer: false);
 Resturant resturant6 = Resturant(
-    image: "images/كبة.jpg",
-    name: "Ancient Dragon",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    image: "images/طوشكا.jpg",
+    name: "طوشكا",
+    desc: "4.6 (1K+) - \$\$\$ - المطعم اللبناني",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "توصيل 1\$",
     favorite: false,
     freeOffer: false);
 Resturant resturant7 = Resturant(
-    image: "images/كبة.jpg",
-    name: "Ancient Dragon",
-    desc: "4.6 (1K+) - \$\$\$ - burger-pizza",
+    image: "images/سوشي رول.jpg",
+    name: "سوشي",
+    desc: "4.6 (1K+) - \$\$\$ -ماكولات بحريه",
     price: "\$10",
     distance: "30-50 m",
-    deliveryFee: "FREE Delivery",
+    deliveryFee: "لايوجد توصيل",
     favorite: false,
     freeOffer: false);
 
@@ -150,4 +154,13 @@ class OrderModel {
   String image;
 
   OrderModel(this.Delivered, this.Resturant, this.image, this.rating);
+}
+
+class Product {
+  String title;
+  String descriptions;
+  String price;
+  String image;
+
+  Product({this.descriptions, this.image, this.title, this.price});
 }

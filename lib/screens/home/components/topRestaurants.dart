@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -26,7 +27,7 @@ class _topRestaurantCardState extends State<topRestaurantCard> {
         child: Container(
           margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 10),
           width: 250,
-          height: 285,
+          height: 310,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
@@ -91,7 +92,9 @@ class _topRestaurantCardState extends State<topRestaurantCard> {
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                   child: Text(
-                                '1+1 Free',
+                                '1+1 ' +
+                                    Applocalizations.of(context)
+                                        .translate("Free"),
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               )),
                             ),
@@ -109,13 +112,13 @@ class _topRestaurantCardState extends State<topRestaurantCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
+                      padding: const EdgeInsets.only(left: 12.0, right: 12),
                       child: Text(
                         widget.restaurant.name,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
@@ -157,7 +160,8 @@ class _topRestaurantCardState extends State<topRestaurantCard> {
                                 border: Border.all(color: Colors.black)),
                             child: Text(
                               widget.restaurant.deliveryFee,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                           ),
                           Row(
@@ -178,8 +182,12 @@ class _topRestaurantCardState extends State<topRestaurantCard> {
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.black)),
                                 child: Text(
-                                  widget.restaurant.price + "min",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  widget.restaurant.price +
+                                      Applocalizations.of(context)
+                                          .translate("min"),
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
                                 ),
                               ),
                             ],

@@ -50,7 +50,7 @@ class _GetStartedState extends State<GetStarted> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 60,
+                          width: 100,
                         ),
                         Text(
                           Applocalizations.of(context)
@@ -61,7 +61,7 @@ class _GetStartedState extends State<GetStarted> {
                               fontWeight: FontWeight.bold),
                         ),
                         Container(
-                          width: 60,
+                          width: 100,
                           child: FlatButton(
                               onPressed: () => {
                                     Navigator.pushReplacement(
@@ -71,7 +71,7 @@ class _GetStartedState extends State<GetStarted> {
                                                 EnterAddress()))
                                   },
                               child: Text(
-                                "Skip",
+                                Applocalizations.of(context).translate('skip'),
                                 style: TextStyle(color: brown),
                               )),
                         )
@@ -86,7 +86,8 @@ class _GetStartedState extends State<GetStarted> {
                     ),
                   ),
                   RoundedButton(
-                    title: "Continue with facebook",
+                    title: Applocalizations.of(context)
+                        .translate("Continue with facebook"),
                     backgroundColor: brown,
                     iconColor: Colors.white,
                     disabeld: false,
@@ -102,7 +103,7 @@ class _GetStartedState extends State<GetStarted> {
                   ),
                   Center(
                     child: Text(
-                      "or",
+                      Applocalizations.of(context).translate("or"),
                       style: TextStyle(fontSize: 18, color: brown),
                     ),
                   ),
@@ -112,7 +113,9 @@ class _GetStartedState extends State<GetStarted> {
                         height: 40,
                         child: FlatButton(
                           onPressed: () => {opensheet(context)},
-                          child: Text('Continue with email',
+                          child: Text(
+                              Applocalizations.of(context)
+                                  .translate('Continue with email'),
                               style: TextStyle(fontSize: 15, color: brown)),
                           textColor: brown,
                           shape: RoundedRectangleBorder(

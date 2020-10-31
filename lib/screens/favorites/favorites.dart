@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/Map/conponents/restaurantMiniCard.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -13,8 +14,6 @@ class Favorites extends StatefulWidget {
 class _FavoritesState extends State<Favorites> {
   List<Widget> restaurants = [
     RestaurantMiniCard(),
-    RestaurantMiniCard(),
-    RestaurantMiniCard()
   ];
 
   @override
@@ -36,7 +35,7 @@ class _FavoritesState extends State<Favorites> {
                   width: 60,
                 ),
                 Text(
-                  "Favorites",
+                  Applocalizations.of(context).translate("Favorites"),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -66,7 +65,8 @@ class _FavoritesState extends State<Favorites> {
                     actionPane: SlidableDrawerActionPane(),
                     secondaryActions: [
                       IconSlideAction(
-                        caption: 'Delete',
+                        caption:
+                            Applocalizations.of(context).translate("Delete"),
                         color: Colors.red,
                         icon: Icons.delete,
                         onTap: () => {

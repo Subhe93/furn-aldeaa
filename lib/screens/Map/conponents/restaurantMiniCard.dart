@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class RestaurantMiniCard extends StatelessWidget {
   const RestaurantMiniCard({
@@ -9,7 +10,7 @@ class RestaurantMiniCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 8),
+      padding: const EdgeInsets.only(left: 8, right: 8),
       child: Container(
         height: 120,
         child: Row(
@@ -34,7 +35,7 @@ class RestaurantMiniCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'The Pizza Factory',
+                    Applocalizations.of(context).translate('The Pizza Factory'),
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
@@ -100,7 +101,9 @@ class RestaurantMiniCard extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
-                              '1 + 1 FREE',
+                              '1 + 1 ' +
+                                  Applocalizations.of(context)
+                                      .translate("FREE"),
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -121,7 +124,7 @@ class RestaurantMiniCard extends StatelessWidget {
                                 '30 - 20',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
-                              Text('min')
+                              Text("min")
                             ],
                           ),
                         ),

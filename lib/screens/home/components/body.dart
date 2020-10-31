@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/home/components/categorries.dart';
 import 'package:furn_aldeaa/screens/home/components/offer_card.dart';
@@ -23,7 +24,7 @@ class Body extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 14.0),
             child: Text(
-              "DELIVER TO",
+              Applocalizations.of(context).translate("DELIVER TO"),
               style: TextStyle(color: kTextLightColor, fontSize: 15),
             ),
           ),
@@ -54,7 +55,7 @@ class Body extends StatelessWidget {
             ),
           ),
           Container(
-            height: 370,
+            height: 410,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -63,7 +64,8 @@ class Body extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 14.0),
-                  child: Text('Order Again',
+                  child: Text(
+                      Applocalizations.of(context).translate("Order Again"),
                       style: TextStyle(
                           color: Colors.black.withOpacity(0.7),
                           fontSize: 30,
@@ -98,14 +100,14 @@ class Body extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "Browse",
+                  Applocalizations.of(context).translate("Browse"),
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 SizedBox(
                   width: 5,
                 ),
                 Text(
-                  "64 resturants",
+                  "64" + Applocalizations.of(context).translate("resturants"),
                   style: TextStyle(color: ksecondaryColor, fontSize: 20),
                 ),
               ],
@@ -123,7 +125,7 @@ class Body extends StatelessWidget {
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding: const EdgeInsets.only(left: 20.0, right: 20),
                     child: Container(
                         height: 60,
                         width: 60,
@@ -142,14 +144,19 @@ class Body extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Get 10\$',
+                          Applocalizations.of(context).translate("Get") +
+                              '10\$',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Text('Give a Friend \$10 to try joyfood and')
+                        Text(Applocalizations.of(context)
+                                .translate("Give a Friend ") +
+                            '\$10' +
+                            Applocalizations.of(context).translate("to try") +
+                            "joyfood")
                       ],
                     ),
                   ),
@@ -173,18 +180,18 @@ class Body extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'Top 10 ',
+                      Applocalizations.of(context).translate("Top 10"),
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    Text('restaurants',
+                    Text(Applocalizations.of(context).translate("resturants"),
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black87))
                   ],
                 ),
-                Text('See All',
+                Text(Applocalizations.of(context).translate("See All"),
                     style: TextStyle(fontSize: 18, color: Colors.black26)),
               ],
             ),

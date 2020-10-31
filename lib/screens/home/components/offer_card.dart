@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
-import 'package:furn_aldeaa/screens/offers/offer_screen.dart';
+
 
 class OfferCard extends StatelessWidget {
   final Function press;

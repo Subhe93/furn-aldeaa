@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/item/item.dart';
 import '../../../Constants.dart';
 
 class ProductCell extends StatelessWidget {
+  final Product product;
   const ProductCell({
     Key key,
+    this.product,
   }) : super(key: key);
 
   @override
@@ -24,12 +27,12 @@ class ProductCell extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    'Pizza 1+1 Free',
+                    this.product.title,
                     style: TextStyle(fontSize: 17, color: kTextColor),
                   ),
-                  Text('Choose 1 pizza and get 1 for free',
+                  Text(this.product.descriptions,
                       style: TextStyle(fontSize: 15, color: kTextColor)),
-                  Text('\$44.42',
+                  Text('\$' + this.product.price,
                       style: TextStyle(fontSize: 17, color: kTextColor))
                 ],
               ),
@@ -39,7 +42,7 @@ class ProductCell extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage('images/طوشكا.jpg'))),
+                        image: AssetImage(this.product.image))),
               )
             ],
           ),

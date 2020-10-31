@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/widgets/RoundedButton.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
@@ -10,16 +11,10 @@ class CreateAccount extends StatefulWidget {
 
 class _CreateAccountState extends State<CreateAccount> {
   int currentview = 0;
-  List<Widget> pages;
-
-  @override
-  void initState() {
-    pages = [page1(), page2(), page3(), Page4(), page5()];
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
+    List pages = [page1(), page2(), page3(), page4(), page5()];
     return pages[currentview];
   }
 
@@ -41,7 +36,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   width: 60,
                 ),
                 Text(
-                  "Contineu with email",
+                  Applocalizations.of(context).translate("Contineu with email"),
                   style: TextStyle(
                       color: brown, fontSize: 18, fontWeight: FontWeight.bold),
                 ),
@@ -60,7 +55,7 @@ class _CreateAccountState extends State<CreateAccount> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 80,
+              height: 90,
               decoration: BoxDecoration(
                 border: Border.all(width: 2, color: boxColor),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -73,7 +68,8 @@ class _CreateAccountState extends State<CreateAccount> {
                     padding:
                         const EdgeInsets.only(left: 8.0, right: 8.0, top: 4),
                     child: Text(
-                      'Enter email *',
+                      Applocalizations.of(context).translate("Enter email") +
+                          '*',
                       style: TextStyle(color: Colors.black87, fontSize: 15),
                     ),
                   ),
@@ -97,7 +93,8 @@ class _CreateAccountState extends State<CreateAccount> {
                         });
                       },
                       decoration: InputDecoration(
-                          hintText: 'Enter email here',
+                          hintText: Applocalizations.of(context)
+                              .translate("Enter email here"),
                           border: InputBorder.none),
                     ),
                   ),
@@ -112,20 +109,21 @@ class _CreateAccountState extends State<CreateAccount> {
 
   Widget page2() {
     return Container(
-      height: 500,
-      child: Column(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10.0),
-                    topRight: Radius.circular(10.0))),
-            width: double.maxFinite,
-            child: (Column(
+      height: 600,
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10.0),
+                topRight: Radius.circular(10.0))),
+        width: double.maxFinite,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            (Column(
               children: [
                 Container(
-                  height: 50,
+                  height: 60,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -140,7 +138,8 @@ class _CreateAccountState extends State<CreateAccount> {
                             child: Icon(Icons.arrow_back_ios)),
                       ),
                       Text(
-                        "Create Account",
+                        Applocalizations.of(context)
+                            .translate("Create Account"),
                         style: TextStyle(
                             color: brown,
                             fontSize: 18,
@@ -165,7 +164,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       Padding(
                         padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                         child: Container(
-                          height: 80,
+                          height: 90,
                           decoration: BoxDecoration(
                             color: Colors.black.withOpacity(0.05),
                             border: Border.all(
@@ -181,7 +180,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                 padding: const EdgeInsets.only(
                                     left: 8.0, right: 8.0, top: 4),
                                 child: Text(
-                                  'Enter email *',
+                                  Applocalizations.of(context)
+                                          .translate("Enter email") +
+                                      '*',
                                   style: TextStyle(
                                       color: Colors.black87, fontSize: 10),
                                 ),
@@ -203,7 +204,8 @@ class _CreateAccountState extends State<CreateAccount> {
                                     setState(() {});
                                   },
                                   decoration: InputDecoration(
-                                      hintText: 'Enter email here',
+                                      hintText: Applocalizations.of(context)
+                                          .translate("Enter email here"),
                                       border: InputBorder.none),
                                 ),
                               ),
@@ -219,7 +221,7 @@ class _CreateAccountState extends State<CreateAccount> {
                             children: [
                               Expanded(
                                 child: Container(
-                                  height: 70,
+                                  height: 80,
                                   decoration: BoxDecoration(
                                     color: Colors.black.withOpacity(0.05),
                                     border: Border.all(
@@ -238,7 +240,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                         padding: const EdgeInsets.only(
                                             left: 8.0, right: 8.0, top: 4),
                                         child: Text(
-                                          'First Name *',
+                                          Applocalizations.of(context)
+                                                  .translate("First Name") +
+                                              '*',
                                           style: TextStyle(
                                               color: Colors.black87,
                                               fontSize: 10),
@@ -261,7 +265,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                             setState(() {});
                                           },
                                           decoration: InputDecoration(
-                                              hintText: 'First name here',
+                                              hintText: Applocalizations.of(
+                                                      context)
+                                                  .translate("First name here"),
                                               border: InputBorder.none),
                                         ),
                                       ),
@@ -274,7 +280,7 @@ class _CreateAccountState extends State<CreateAccount> {
                               ),
                               Expanded(
                                 child: Container(
-                                  height: 70,
+                                  height: 80,
                                   decoration: BoxDecoration(
                                     color: Colors.black.withOpacity(0.05),
                                     border: Border.all(
@@ -293,7 +299,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                         padding: const EdgeInsets.only(
                                             left: 8.0, right: 8.0, top: 4),
                                         child: Text(
-                                          'Last name  *',
+                                          Applocalizations.of(context)
+                                                  .translate("Last name") +
+                                              '*',
                                           style: TextStyle(
                                               color: Colors.black87,
                                               fontSize: 10),
@@ -316,7 +324,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                             setState(() {});
                                           },
                                           decoration: InputDecoration(
-                                              hintText: 'Last name  here',
+                                              hintText: Applocalizations.of(
+                                                      context)
+                                                  .translate("Last name  here"),
                                               border: InputBorder.none),
                                         ),
                                       ),
@@ -331,7 +341,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       Padding(
                         padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                         child: Container(
-                          height: 70,
+                          height: 80,
                           decoration: BoxDecoration(
                             color: Colors.black.withOpacity(0.05),
                             border: Border.all(
@@ -347,7 +357,9 @@ class _CreateAccountState extends State<CreateAccount> {
                                 padding: const EdgeInsets.only(
                                     left: 8.0, right: 8.0, top: 4),
                                 child: Text(
-                                  'Password *',
+                                  Applocalizations.of(context)
+                                          .translate("Password") +
+                                      '*',
                                   style: TextStyle(
                                       color: Colors.black87, fontSize: 10),
                                 ),
@@ -384,9 +396,12 @@ class _CreateAccountState extends State<CreateAccount> {
                             children: [
                               Row(
                                 children: [
-                                  Text("By Continueing you accept the "),
+                                  Text(Applocalizations.of(context).translate(
+                                      "By Continueing you accept the ")),
                                   GestureDetector(
-                                      child: Text("Terms of user",
+                                      child: Text(
+                                          Applocalizations.of(context)
+                                              .translate("Terms of user"),
                                           style: TextStyle(
                                               decoration:
                                                   TextDecoration.underline,
@@ -394,11 +409,14 @@ class _CreateAccountState extends State<CreateAccount> {
                                       onTap: () {
                                         // do what you need to do when "Click here" gets clicked
                                       }),
-                                  Text(' and')
+                                  Text(Applocalizations.of(context)
+                                      .translate(" and"))
                                 ],
                               ),
                               GestureDetector(
-                                  child: Text("Privact Policy",
+                                  child: Text(
+                                      Applocalizations.of(context)
+                                          .translate("Privact Policy"),
                                       style: TextStyle(
                                           decoration: TextDecoration.underline,
                                           color: Colors.black)),
@@ -413,23 +431,26 @@ class _CreateAccountState extends State<CreateAccount> {
                 SizedBox(
                   height: 50,
                 ),
-                RoundedButton(
-                  onPressed: () {
-                    setState(() {
-                      currentview = 2;
-                    });
-                  },
-                  title: "Create account",
-                  backgroundColor: yellow,
-                  textColor: Colors.white,
-                  icon: null,
-                  iconColor: Colors.white,
-                  disabeld: false,
-                )
               ],
             )),
-          ),
-        ],
+            Container(
+              height: 70,
+              child: RoundedButton(
+                onPressed: () {
+                  setState(() {
+                    currentview = 2;
+                  });
+                },
+                title: Applocalizations.of(context).translate("Create account"),
+                backgroundColor: yellow,
+                textColor: Colors.white,
+                icon: null,
+                iconColor: Colors.white,
+                disabeld: false,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -456,7 +477,8 @@ class _CreateAccountState extends State<CreateAccount> {
                         child: Icon(Icons.arrow_back_ios)),
                   ),
                   Text(
-                    "Enter Phone Number",
+                    Applocalizations.of(context)
+                        .translate("Enter Phone Number"),
                     style: TextStyle(
                         color: brown,
                         fontSize: 18,
@@ -480,8 +502,8 @@ class _CreateAccountState extends State<CreateAccount> {
             Padding(
               padding: const EdgeInsets.only(
                   left: 15.0, right: 15.0, top: 8.0, bottom: 8.0),
-              child: Text(
-                  'Please enter your phone number in case we need to contact you during delivery'),
+              child: Text(Applocalizations.of(context).translate(
+                  "Please enter your phone number in case we need to contact you during delivery")),
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -510,7 +532,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   currentview = 3;
                 });
               },
-              title: "Next",
+              title: Applocalizations.of(context).translate("Next"),
               backgroundColor: yellow,
               textColor: Colors.white,
               icon: null,
@@ -523,7 +545,7 @@ class _CreateAccountState extends State<CreateAccount> {
     );
   }
 
-  Widget Page4() {
+  Widget page4() {
     return Container(
       height: 400,
       child: SingleChildScrollView(
@@ -545,7 +567,8 @@ class _CreateAccountState extends State<CreateAccount> {
                         child: Icon(Icons.arrow_back_ios)),
                   ),
                   Text(
-                    "Verify phone number",
+                    Applocalizations.of(context)
+                        .translate("Verify phone number"),
                     style: TextStyle(
                         color: brown,
                         fontSize: 18,
@@ -566,7 +589,8 @@ class _CreateAccountState extends State<CreateAccount> {
             SizedBox(
               height: 20,
             ),
-            Text('Please enter the code we sent you at '),
+            Text(Applocalizations.of(context)
+                .translate("Please enter the code we sent you at ")),
             Text("0963 233 222 332",
                 style: TextStyle(
                     decoration: TextDecoration.underline, color: Colors.black)),
@@ -684,7 +708,10 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             SizedBox(height: 10),
-            FlatButton(onPressed: null, child: Text('Resend Code')),
+            FlatButton(
+                onPressed: null,
+                child: Text(
+                    Applocalizations.of(context).translate("Resend Code"))),
             SizedBox(height: 30),
             RoundedButton(
               onPressed: () {
@@ -692,7 +719,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   currentview = 4;
                 });
               },
-              title: "Verify",
+              title: Applocalizations.of(context).translate("Verify"),
               backgroundColor: yellow,
               textColor: Colors.white,
               icon: null,
@@ -728,7 +755,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       child: Icon(Icons.arrow_back_ios)),
                 ),
                 Text(
-                  "Login",
+                  Applocalizations.of(context).translate("Login"),
                   style: TextStyle(
                       color: brown, fontSize: 18, fontWeight: FontWeight.bold),
                 ),
@@ -747,13 +774,13 @@ class _CreateAccountState extends State<CreateAccount> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 90,
+              height: 100,
               decoration: BoxDecoration(
                 border: Border.all(width: 2, color: boxColor),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 15),
+                padding: const EdgeInsets.only(left: 8.0, top: 15, right: 8),
                 child: Stack(
                   children: [
                     Column(
@@ -761,7 +788,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Email *',
+                          Applocalizations.of(context).translate("Email") + '*',
                           style: TextStyle(color: Colors.black87),
                         ),
                         TextFormField(
@@ -777,7 +804,8 @@ class _CreateAccountState extends State<CreateAccount> {
                             });
                           },
                           decoration: InputDecoration(
-                              hintText: 'Enter email here',
+                              hintText: Applocalizations.of(context)
+                                  .translate("Enter email here"),
                               border: InputBorder.none),
                         ),
                       ],
@@ -790,47 +818,53 @@ class _CreateAccountState extends State<CreateAccount> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 90,
+              height: 95,
               decoration: BoxDecoration(
                 border: Border.all(width: 2, color: boxColor),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 15),
-                child: Stack(
+                padding: const EdgeInsets.only(left: 8.0, top: 15, right: 8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Text(Applocalizations.of(context).translate("Password") +
+                        '*'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Password *'),
-                        TextFormField(
-                          onTap: () {
-                            setState(() {
-                              boxColor = Colors.black87;
-                            });
-                          },
-                          textInputAction: TextInputAction.next,
-                          onChanged: (value) {
-                            setState(() {
-                              boxColor = Colors.black54;
-                            });
-                          },
-                          obscureText: obscure,
-                          decoration: InputDecoration(
-                              hintText: '**********', border: InputBorder.none),
+                        Expanded(
+                          child: TextFormField(
+                            onTap: () {
+                              setState(() {
+                                boxColor = Colors.black87;
+                              });
+                            },
+                            textInputAction: TextInputAction.next,
+                            onChanged: (value) {
+                              setState(() {
+                                boxColor = Colors.black54;
+                              });
+                            },
+                            obscureText: obscure,
+                            decoration: InputDecoration(
+                                hintText: '**********',
+                                border: InputBorder.none),
+                          ),
                         ),
-                      ],
-                    ),
-                    Align(
-                        alignment: Alignment.centerRight,
-                        child: FlatButton(
+                        FlatButton(
                             onPressed: () {
                               setState(() {
                                 obscure ? obscure = true : obscure = false;
                               });
                             },
-                            child: Text('Show')))
+                            child: Text(
+                              Applocalizations.of(context).translate("Show"),
+                              style: TextStyle(fontWeight: FontWeight.normal),
+                            ))
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -845,7 +879,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 currentview = 4;
               });
             },
-            title: "Login",
+            title: Applocalizations.of(context).translate("Login"),
             backgroundColor: yellow,
             textColor: Colors.white,
             icon: null,

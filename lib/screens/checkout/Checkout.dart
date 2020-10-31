@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 import 'package:furn_aldeaa/screens/checkout/screens/deliveryTime.dart';
 import 'package:furn_aldeaa/screens/checkout/screens/delivery_address.dart';
 import 'package:furn_aldeaa/screens/checkout/screens/Select_payment_methods.dart';
 
 import 'package:furn_aldeaa/widgets/CustomRadioButton.dart';
+
+List<RadioModel> sampleData = new List<RadioModel>();
 
 class Checkout extends StatefulWidget {
   static String id = 'checkout';
@@ -15,18 +18,14 @@ class Checkout extends StatefulWidget {
 
 class _CheckoutState extends State<Checkout> {
   String tip = '\$1';
-  List<RadioModel> sampleData = new List<RadioModel>();
-
-  void initState() {
-    super.initState();
-    sampleData.add(new RadioModel(true, '\$1'));
-    sampleData.add(new RadioModel(false, '\$2'));
-    sampleData.add(new RadioModel(false, '\$3'));
-    sampleData.add(new RadioModel(false, 'Other'));
-  }
 
   @override
   Widget build(BuildContext context) {
+    sampleData.add(new RadioModel(true, '\$1'));
+    sampleData.add(new RadioModel(false, '\$2'));
+    sampleData.add(new RadioModel(false, '\$3'));
+    sampleData.add(
+        RadioModel(false, Applocalizations.of(context).translate("Other")));
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,7 +51,7 @@ class _CheckoutState extends State<Checkout> {
                             )),
                       ),
                       Text(
-                        "Checkout",
+                        Applocalizations.of(context).translate("Checkout"),
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
@@ -79,7 +78,9 @@ class _CheckoutState extends State<Checkout> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
-                          child: Text('DELIVERY',
+                          child: Text(
+                              Applocalizations.of(context)
+                                  .translate('DELIVERY'),
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                         ),
@@ -123,7 +124,10 @@ class _CheckoutState extends State<Checkout> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Text('Delivery Details',
+                                          Text(
+                                              Applocalizations.of(context)
+                                                  .translate(
+                                                      "Delivery Details"),
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.normal,
@@ -153,7 +157,7 @@ class _CheckoutState extends State<Checkout> {
                           padding:
                               const EdgeInsets.only(left: 15.0, right: 8.0),
                           child: Container(
-                            height: 60,
+                            height: 70,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -183,12 +187,17 @@ class _CheckoutState extends State<Checkout> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        Text('Contact Info',
+                                        Text(
+                                            Applocalizations.of(context)
+                                                .translate("Contact Info"),
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.normal,
                                                 color: Colors.black54)),
-                                        Text('Enter your contact info',
+                                        Text(
+                                            Applocalizations.of(context)
+                                                .translate(
+                                                    "Enter your contact info"),
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.normal,
@@ -245,7 +254,10 @@ class _CheckoutState extends State<Checkout> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Text('Estimated Arrival',
+                                          Text(
+                                              Applocalizations.of(context)
+                                                  .translate(
+                                                      "Estimated Arrival"),
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.normal,
@@ -290,7 +302,8 @@ class _CheckoutState extends State<Checkout> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
-                          child: Text('PAYMENT',
+                          child: Text(
+                              Applocalizations.of(context).translate("PAYMENT"),
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold)),
                         ),
@@ -334,14 +347,19 @@ class _CheckoutState extends State<Checkout> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Text('Payment Method',
+                                          Text(
+                                              Applocalizations.of(context)
+                                                  .translate("Payment Method"),
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.normal,
                                                   color: Colors.black54)),
-                                          Text('Add payment Method',
+                                          Text(
+                                              Applocalizations.of(context)
+                                                  .translate(
+                                                      "Add payment Method"),
                                               style: TextStyle(
-                                                  fontSize: 18,
+                                                  fontSize: 17,
                                                   fontWeight: FontWeight.normal,
                                                   color: Colors.black54))
                                         ],
@@ -369,7 +387,8 @@ class _CheckoutState extends State<Checkout> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Courier Tip',
+                      Text(
+                          Applocalizations.of(context).translate("Courier Tip"),
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.normal,
@@ -430,7 +449,8 @@ class _CheckoutState extends State<Checkout> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Begin Checkout',
+                        Applocalizations.of(context)
+                            .translate("Begin Checkout"),
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/widgets/RoundedButton.dart';
 import 'package:furn_aldeaa/screens/enter_adress/components/locationCell.dart';
 import 'package:furn_aldeaa/screens/home/home_screen.dart';
@@ -33,9 +34,11 @@ class _EnterAdressState extends State<EnterAddress> {
                   child: CupertinoSlidingSegmentedControl(
                       groupValue: 0,
                       backgroundColor: Colors.black12,
-                      children: const <int, Widget>{
-                        0: Text('Delivery'),
-                        1: Text('Pickup'),
+                      children: <int, Widget>{
+                        0: Text(
+                            Applocalizations.of(context).translate("Delivery")),
+                        1: Text(
+                            Applocalizations.of(context).translate("Pickup")),
                       },
                       onValueChanged: (value) {
                         setState(() {
@@ -88,7 +91,8 @@ class _EnterAdressState extends State<EnterAddress> {
                               BorderSide(color: Colors.black38, width: 3.0),
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         ),
-                        hintText: 'Enter a new address'),
+                        hintText: Applocalizations.of(context)
+                            .translate("Enter a new address")),
                   ),
                   _textController.text.length > 0
                       ? new IconButton(
@@ -114,12 +118,15 @@ class _EnterAdressState extends State<EnterAddress> {
               child: ListView(
                 children: [
                   LocationCell(
-                      location: 'Current location',
-                      details: 'Unable to access',
+                      location: Applocalizations.of(context)
+                          .translate("Current location"),
+                      details: Applocalizations.of(context)
+                          .translate("Unable to access"),
                       isChecked: false,
                       icon: Icons.location_searching),
                   LocationCell(
-                    location: 'Banyas Tartous',
+                    location: Applocalizations.of(context)
+                        .translate("Banyas Tartous"),
                     details: 'some text some text',
                     isChecked: true,
                     icon: Icons.location_on,
@@ -135,7 +142,7 @@ class _EnterAdressState extends State<EnterAddress> {
                   new MaterialPageRoute(
                       builder: (BuildContext context) => HomeScreen()));
             },
-            title: "Done",
+            title: Applocalizations.of(context).translate("Done"),
             backgroundColor: brown,
             textColor: Colors.white,
             icon: null,

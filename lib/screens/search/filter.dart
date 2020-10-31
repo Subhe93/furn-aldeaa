@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/widgets/CustomRadioButton.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
@@ -39,7 +40,7 @@ class _FilterState extends State<Filter> {
                     width: 60,
                   ),
                   Text(
-                    "Filter",
+                    Applocalizations.of(context).translate("Filter"),
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -62,7 +63,7 @@ class _FilterState extends State<Filter> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: Text('Sort',
+              child: Text(Applocalizations.of(context).translate("Sort"),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -73,7 +74,7 @@ class _FilterState extends State<Filter> {
               child: Column(
                 children: <Widget>[
                   _myRadioButton(
-                    title: "Top Rated",
+                    title: Applocalizations.of(context).translate("Top Rated"),
                     value: 0,
                     groupValue: _groupValue,
                     onChanged: (newValue) =>
@@ -87,7 +88,8 @@ class _FilterState extends State<Filter> {
                     ),
                   ),
                   _myRadioButton(
-                    title: "Most Popular",
+                    title:
+                        Applocalizations.of(context).translate("Most Popular"),
                     value: 1,
                     groupValue: _groupValue,
                     onChanged: (newValue) =>
@@ -101,7 +103,8 @@ class _FilterState extends State<Filter> {
                     ),
                   ),
                   _myRadioButton(
-                    title: "Min.order amount",
+                    title: Applocalizations.of(context)
+                        .translate("Min.order amount"),
                     value: 2,
                     groupValue: _groupValue,
                     onChanged: (newValue) =>
@@ -112,7 +115,7 @@ class _FilterState extends State<Filter> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: Text('MENU PRICES',
+              child: Text(Applocalizations.of(context).translate("MENU PRICES"),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -149,7 +152,8 @@ class _FilterState extends State<Filter> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
-              child: Text('DELIVERY FEE',
+              child: Text(
+                  Applocalizations.of(context).translate("DELIVERY FEE"),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -160,7 +164,7 @@ class _FilterState extends State<Filter> {
               child: Column(
                 children: <Widget>[
                   _myRadioButton(
-                    title: "Show All",
+                    title: Applocalizations.of(context).translate("Show All"),
                     value: 0,
                     groupValue: _secondGroup,
                     onChanged: (newValue) =>
@@ -174,7 +178,7 @@ class _FilterState extends State<Filter> {
                     ),
                   ),
                   _myRadioButton(
-                    title: "Free",
+                    title: Applocalizations.of(context).translate("Free"),
                     value: 1,
                     groupValue: _secondGroup,
                     onChanged: (newValue) =>
@@ -188,7 +192,8 @@ class _FilterState extends State<Filter> {
                     ),
                   ),
                   _myRadioButton(
-                    title: "Less than \$ 10",
+                    title: Applocalizations.of(context).translate("Less than") +
+                        "\$ 10",
                     value: 2,
                     groupValue: _secondGroup,
                     onChanged: (newValue) =>
@@ -202,7 +207,8 @@ class _FilterState extends State<Filter> {
                     ),
                   ),
                   _myRadioButton(
-                    title: "Less than \$ 10",
+                    title: Applocalizations.of(context).translate("Less than") +
+                        "\$ 10",
                     value: 3,
                     groupValue: _secondGroup,
                     onChanged: (newValue) =>

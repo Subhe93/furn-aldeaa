@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:latlong/latlong.dart';
 
 class RestaurantInfoRivews extends StatefulWidget {
@@ -20,60 +21,62 @@ class _RestaurantInfoRivewsState extends State<RestaurantInfoRivews> {
   Widget build(BuildContext context) {
     return Container(
       height: 620,
-      child: Column(
-        children: [
-          Container(
-            height: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 60,
-                ),
-                Text(
-                  "The Pizza Factory",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
-                ),
-                Container(
-                  width: 60,
-                  child: FlatButton(
-                      onPressed: () => {Navigator.pop(context)},
-                      child: Icon(Icons.cancel)),
-                )
-              ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 50,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 60,
+                  ),
+                  Text(
+                    Applocalizations.of(context).translate("The Pizza Factory"),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    width: 60,
+                    child: FlatButton(
+                        onPressed: () => {Navigator.pop(context)},
+                        child: Icon(Icons.cancel)),
+                  )
+                ],
+              ),
             ),
-          ),
-          Divider(
-            height: 5,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            height: 40,
-            child: CupertinoSlidingSegmentedControl(
-                groupValue: segment,
-                backgroundColor: Colors.black12,
-                children: const <int, Widget>{
-                  0: Text('info'),
-                  1: Text('reviews'),
-                },
-                onValueChanged: (value) {
-                  setState(() {
-                    segment = value;
-                    value == 0 ? info = true : info = false;
-                  });
-                  print(info);
-                }),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          info ? RestaurantInfo() : RestaurantReview()
-        ],
+            Divider(
+              height: 5,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 40,
+              child: CupertinoSlidingSegmentedControl(
+                  groupValue: segment,
+                  backgroundColor: Colors.black12,
+                  children: <int, Widget>{
+                    0: Text(Applocalizations.of(context).translate("Info")),
+                    1: Text(Applocalizations.of(context).translate("Review")),
+                  },
+                  onValueChanged: (value) {
+                    setState(() {
+                      segment = value;
+                      value == 0 ? info = true : info = false;
+                    });
+                    print(info);
+                  }),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            info ? RestaurantInfo() : RestaurantReview()
+          ],
+        ),
       ),
     );
   }
@@ -123,7 +126,9 @@ class RestaurantReview extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text('Out of 4 Reviews')
+                    Text(Applocalizations.of(context).translate("Out of") +
+                        "4" +
+                        Applocalizations.of(context).translate("Reviews"))
                   ],
                 ),
               )
@@ -230,7 +235,9 @@ class RestaurantInfo extends StatelessWidget {
                         width: 70.0,
                         height: 70.0,
                         point: new LatLng(44.5, 44.09),
-                        builder: (ctx) => CustomMarker('The Pizza Factory')),
+                        builder: (ctx) => CustomMarker(
+                            Applocalizations.of(context)
+                                .translate('The Pizza Factory'))),
                     Marker(
                         width: 70,
                         height: 70,
@@ -261,7 +268,7 @@ class RestaurantInfo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Address',
+                      Applocalizations.of(context).translate("Address"),
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
                     ),
@@ -298,7 +305,7 @@ class RestaurantInfo extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      'Delivery Time',
+                      Applocalizations.of(context).translate("Delivery Time"),
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
                     ),
@@ -308,7 +315,7 @@ class RestaurantInfo extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Text(
-                        'Sundy',
+                        Applocalizations.of(context).translate("Sundy"),
                         style: TextStyle(),
                       ),
                     ),
@@ -319,7 +326,9 @@ class RestaurantInfo extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Text(
-                        'Monday - Thursday',
+                        Applocalizations.of(context).translate("Monday") +
+                            "-" +
+                            Applocalizations.of(context).translate("Thursday"),
                         style: TextStyle(),
                       ),
                     ),
@@ -330,7 +339,9 @@ class RestaurantInfo extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Text(
-                        'Friday _ Saturday',
+                        Applocalizations.of(context).translate("Friday") +
+                            "_" +
+                            Applocalizations.of(context).translate("Saturday"),
                         style: TextStyle(),
                       ),
                     ),
@@ -363,7 +374,7 @@ class RestaurantInfo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Payment Options',
+                      Applocalizations.of(context).translate("Payment options"),
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
                     ),

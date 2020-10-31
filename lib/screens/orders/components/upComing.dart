@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class UpcomingOrder extends StatelessWidget {
   const UpcomingOrder({
@@ -34,7 +35,9 @@ class UpcomingOrder extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('The Pizza Factory',
+                  Text(
+                      Applocalizations.of(context)
+                          .translate('The Pizza Factory'),
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -44,7 +47,10 @@ class UpcomingOrder extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Text('Estimated Arrival :',
+                      Text(
+                          Applocalizations.of(context)
+                                  .translate("Estimated Arrival") +
+                              "   ",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.normal)),
                       Text('19:15 - 19:30',
@@ -92,7 +98,9 @@ class UpcomingOrder extends StatelessWidget {
                   SizedBox(
                     width: 20,
                   ),
-                  Text('Your Food is on its way',
+                  Text(
+                      Applocalizations.of(context)
+                          .translate("Your Food is on its way"),
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold))
                 ],
@@ -124,9 +132,12 @@ class UpcomingOrder extends StatelessWidget {
                           Icons.close,
                           size: 25,
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Column(
                           children: [
-                            Text('HotDog Pizza',
+                            Text('بيتزا الضيعة',
                                 style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 20)),
@@ -135,7 +146,9 @@ class UpcomingOrder extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Text('Pepperoni',
+                                Text(
+                                    Applocalizations.of(context)
+                                        .translate('Pepperoni'),
                                     style: TextStyle(
                                       fontWeight: FontWeight.normal,
                                     )),
@@ -170,7 +183,7 @@ class UpcomingOrder extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Subtotal',
+                    Text(Applocalizations.of(context).translate("Subtotal"),
                         style: TextStyle(fontSize: 17, color: Colors.black54)),
                     Text('\$29.22',
                         style: TextStyle(fontSize: 17, color: Colors.black54))
@@ -182,7 +195,7 @@ class UpcomingOrder extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Subtotal',
+                    Text(Applocalizations.of(context).translate("Subtotal"),
                         style: TextStyle(fontSize: 17, color: Colors.black54)),
                     Text('\$29.22',
                         style: TextStyle(fontSize: 17, color: Colors.black54))
@@ -194,7 +207,7 @@ class UpcomingOrder extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Subtotal',
+                    Text(Applocalizations.of(context).translate('Subtotal'),
                         style: TextStyle(fontSize: 17, color: Colors.black54)),
                     Text('\$29.22',
                         style: TextStyle(fontSize: 17, color: Colors.black54))
@@ -206,7 +219,7 @@ class UpcomingOrder extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Total',
+                    Text(Applocalizations.of(context).translate("Total"),
                         style: TextStyle(
                             fontSize: 18,
                             color: Colors.black87,
@@ -228,7 +241,7 @@ class UpcomingOrder extends StatelessWidget {
             height: 20,
           ),
           Center(
-              child: Text('Get Help',
+              child: Text(Applocalizations.of(context).translate("Get Help"),
                   style:
                       TextStyle(fontSize: 20, fontWeight: FontWeight.normal))),
           Padding(
@@ -239,7 +252,7 @@ class UpcomingOrder extends StatelessWidget {
                   color: yellow, borderRadius: BorderRadius.circular(20)),
               child: Center(
                 child: Text(
-                  'Track Order',
+                  Applocalizations.of(context).translate("ُTrack Order"),
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import 'body.dart';
 
 class Account extends StatefulWidget {
@@ -9,7 +8,7 @@ class Account extends StatefulWidget {
 }
 
 class _AccountState extends State<Account> {
-  String title = 'Profile';
+  String title = "Profile";
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +18,8 @@ class _AccountState extends State<Account> {
       child: SafeArea(
         top: false,
         bottom: true,
-        child: Scaffold (
+        child: Scaffold(
           backgroundColor: Colors.white,
-
-
           body: AccountBody(),
         ),
       ),

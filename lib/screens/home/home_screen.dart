@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/screens/cart/cart.dart';
 
 import 'package:furn_aldeaa/screens/components/drawer.dart';
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: yellow.withOpacity(0.8),
                             borderRadius: BorderRadius.circular(40)),
                         child: Padding(
-                          padding: const EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.only(right: 15.0, left: 15),
                           child: InkWell(
                             onTap: () => Navigator.push(
                                 context,
@@ -79,7 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'View Cart (1)',
+                                  Applocalizations.of(context)
+                                          .translate("View Cart") +
+                                      "(1)",
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold,

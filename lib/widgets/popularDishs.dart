@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
-Widget PopularDish() {
+Widget PopularDish(context) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Container(
@@ -17,7 +18,7 @@ Widget PopularDish() {
               width: 100,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('images/سلطة الباستا.jpg'),
+                      image: AssetImage('images/كيكة العسل.jpg'),
                       fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(15)),
             ),
@@ -29,11 +30,11 @@ Widget PopularDish() {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  'Choclate Pancackes',
+                  'كيكة العسل',
                   style: TextStyle(fontSize: 15),
                 ),
                 Text(
-                  'Desert',
+                  'تحلية',
                   style: TextStyle(fontSize: 12),
                 ),
                 Row(
@@ -49,7 +50,7 @@ Widget PopularDish() {
                           Icons.add,
                           color: yellow,
                         ),
-                        Text('Add')
+                        Text(Applocalizations.of(context).translate("Add"))
                       ],
                     )
                   ],

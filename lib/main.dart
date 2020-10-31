@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:furn_aldeaa/screens/enter_adress/enter_adress.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
+          DefaultCupertinoLocalizations.delegate
         ],
         // localeListResolutionCallback: (locale, supportedLocales) {
         //   return supportedLocales

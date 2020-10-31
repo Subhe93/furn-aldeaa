@@ -1,3 +1,90 @@
 {
-    "lets get started":"lets get started"
+    "lets get started":"lets get started",
+    "skip":"Skip",
+    "Continue with facebook":"Continue with facebook",
+    "or": "or","Continue with email":"Continue with email","Order Again":"Order Again"
+    ,"Browse":"Browse",
+    "resturants":"resturants",
+    "DELIVER TO":"DELIVER TO",
+    "Get": "Get",
+    "Give a Friend ":"Give a Friend ",
+    "to try":"to try",
+    "See All":"See All","All":"All","Italian":"Italian","Asian":"Asian","International":"International","Free":"Free","min":"min"
+    ,"VARIATION":"VARIATION","Small - 24 cm":"Small - 24 cm","Medium - 32 cm":"Medium - 32 cm","Larg -  42 cm":"Larg -  42 cm",
+    "Extra Toppings":"Extra Toppings",
+    "Olives": "Olives",
+    "Mashroom":"Mashroom",
+    "Extra Sause":"Extra Sause", "Tomato Sause": "Tomato Sause", "Spicy Katchup": "Spicy Katchup","Sweet Katchup":"Sweet Katchup"
+    ,"Add Instructions (eg. no onions)":"Add Instructions (eg. no onions)"
+    ,"Quantity":"Quantity",
+    "Add To Cart":"Add To Cart",
+    "The Pizza Factory":"The Pizza Factory",
+    "Info":"Info",
+    "Review":"Review",
+    "Address":"Address",
+    "Delivery Time": "Delivery Time",
+    "Sundy":"Sundy",
+    "Mondy":"Mondy",
+    "Thursday":"Thursday",
+    
+    "Pizza":"Pizza","Estimated Arrival":"Estimated Arrival","Order":"Order","Delivered":"Delivered",
+    "Post":"Post",
+    "Upcoming":"Upcoming",
+    "Cnceled":  "Cnceled",
+    "ُTrack Order":"ُTrack Order",
+    "Get Help":"Get Help",
+    "Your Food is on its way":"Your Food is on its way",
+    "Subtotal":"Subtotal",
+    "Total":"Total",
+    "Reorder":     "Reorder","Profile":"Profile","First Name":"First Name","Last Name":"Last Name"
+    ,"Phone Number":"Phone Number",
+    "Email Address":"Email Address" ,
+    "Password":"Password",
+    "Name":   "Name","Minutes":"Minutes",
+    "Your Cart - The Pizza Factory":"Your Cart - The Pizza Factory",
+    "Add More Items":  "Add More Items",
+    "Add more code":"Add more code",
+    "Go to Checkout":   "Go to Checkout",
+    "Your Cart is Empty": "Your Cart is Empty",
+    "Map":"Map","Payment options":"Payment options",
+    "Filter": "Filter",
+    "Sort":"Sort",
+    "Top Rated":"Top Rated",
+    "Most Popular":"Most Popular"
+    ,"Min.order amount":"Min.order amount",
+    "MENU PRICES":"MENU PRICES",
+    "DELIVERY FEE":"DELIVERY FEE", "Show All": "Show All","Less than":"Less than",
+    "Search for restaurants or dishs":"Search for restaurants or dishs","RESTAURANTS":"RESTAURANTS", "DISHES": "DISHES","Search":"Search"
+,"Top 10":"Top 10", "View Cart" : "View Cart","RECENT SEARCHS" :"RECENT SEARCHS" ,"pizza":"pizza","Burgers":"Burgers","DELIVERY":"DELIVERY","Checkout":"Checkout"
+,"Delivery Details":"Delivery Details","Contact Info":"Contact Info","PAYMENT":"PAYMENT","Add payment Method":"Add payment Method","Courier Tip":"Courier Tip",
+"Payment Method":"Payment Method", "Begin Checkout":"Begin Checkout","Delivery Address":"Delivery Address","  (optional)":"  (optional)",
+"ASAP":"ASAP",
+"Choose Delivery Time:":"Choose Delivery Time:",   "Set Delivery Time":   "Set Delivery Time","Add Card":"Add Card",
+"Name on card":"Name on card","Enter Name here":"Enter Name here","Card Number":"Card Number","Expiry Date":"Expiry Date",
+"Out of":"Out of","Reviews":"Reviews","Saturday":"Saturday","Friday":"Friday","Sunday":"Sunday","Cash on delivery":"Cash on delivery"
+, "Add Credit Card": "Add Credit Card",
+"Setup Apple Pay":"Setup Apple Pay","Enter Building Name":"Enter Building Name", "Apartment/Suite": "Apartment/Suite","eg.Doorbell broken, please yell of knock hard":"eg.Doorbell broken, please yell of knock hard",
+"Note to ridder":"Note to ridder","Other":"Other","Enter Delivery Address":"Enter Delivery Address","Enter your contact info":"Enter your contact info"
+,"Current location":"Current location",
+"Unable to access":"Unable to access","Banyas Tartous":"Banyas Tartous","Done":"Done","Login":"Login","Favorites":"Favorites","Delete":"Delete","Popular with Order":"Popular with Order"
+,"Your Cart":"Your Cart","Search Restaurants":"Search Restaurants","EXTRA TOPPINGS":"EXTRA TOPPINGS","Peperoncino":"Peperoncino",  "Mashrooms":  "Mashrooms"
+,"EXTRA SAUSE":"EXTRA SAUSE","Spicy Ketschup":"Spicy Ketschup","Sweet Ketchup":"Sweet Ketchup","QUANTITY":"QUANTITY","Remove From Cart":"Remove From Cart"
+,"Update Cart":"Update Cart","Add":"Add","Minimum":"Minimum","Featured":"Featured","Items":"Items"
+    ,"Offers":"Offers","Pies":"Pies","Salad":"Salad","Delivry":"Delivry","Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs":"Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs,Moazarella,Rocket leavs, Moazarella,Rocket leavs"
+
+,"Edit Account":"Edit Account","Orders":"Orders","Promotions":"Promotions","Invite friends":"Invite friends","Help":"Help","Contact Us":"Contact Us"
+,"Log out":"Log out","Addresses":"Addresses","Payment methods":"Payment methods","Pepperoni":"Pepperoni","Canceled":"Canceled",
+"Create Account": "Create Account"
+,"Enter email":"Enter email",
+"Enter email here":"Enter email here"
+, "First name here": "First name here",
+"Last name":"Last name",
+"Last name  here":"Last name  here","By Continueing you accept the ":"By Continueing you accept the ","Terms of user":"Terms of user",
+" and":" and",
+"Privact Policy":"Privact Policy", "Enter Phone Number": "Enter Phone Number",
+"Please enter your phone number in case we need to contact you during delivery": "Please enter your phone number in case we need to contact you during delivery"
+,"Contineu with email":"Contineu with email","Create account":"Create account","Next":"Next", "Verify phone number": "Verify phone number"
+,"Please enter the code we sent you at ":"Please enter the code we sent you at ","Resend Code":"Resend Code"
+,"Verify":"Verify","Email":"Email","Show":"Show","Enter a new address":"Enter a new address","Delivery":"Delivery","Pickup":"Pickup","Select Payment Method":"Select Payment Method"
+, "MM/YY": "MM/YY","FREE Delivery":"FREE Delivery","FREE":"FREE","Monday":"Monday","Home":"Home","Wrok":"Wrok"
 }

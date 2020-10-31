@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/models/offer_model.dart';
 
 class RestaurantCard extends StatefulWidget {
@@ -26,7 +27,7 @@ class _RestaurantCardState extends State<RestaurantCard> {
       child: Container(
         margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 10),
         width: width,
-        height: 285,
+        height: 310,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -91,7 +92,9 @@ class _RestaurantCardState extends State<RestaurantCard> {
                                 borderRadius: BorderRadius.circular(5)),
                             child: Center(
                                 child: Text(
-                              '1+1 Free',
+                              '1+1' +
+                                  Applocalizations.of(context)
+                                      .translate("Free"),
                               style: TextStyle(fontWeight: FontWeight.bold),
                             )),
                           ),
@@ -104,12 +107,12 @@ class _RestaurantCardState extends State<RestaurantCard> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10, left: 10),
+              padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 12.0),
+                    padding: const EdgeInsets.only(left: 12.0, right: 12),
                     child: Text(
                       widget.restaurant.name,
                       maxLines: 1,
@@ -163,7 +166,8 @@ class _RestaurantCardState extends State<RestaurantCard> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black)),
                         child: Text(
-                          widget.restaurant.price + "min",
+                          widget.restaurant.price +
+                              Applocalizations.of(context).translate("min"),
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),

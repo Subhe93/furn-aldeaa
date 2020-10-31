@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import 'package:furn_aldeaa/screens/Map/conponents/restaurantMiniCard.dart';
 import 'package:furn_aldeaa/screens/Map/restaurant_info_reviews.dart';
 import 'package:latlong/latlong.dart';
@@ -37,7 +38,7 @@ class _MapState extends State<Map> {
                   width: 60,
                 ),
                 Text(
-                  "Filter",
+                  Applocalizations.of(context).translate("Map"),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -99,8 +100,6 @@ class _MapState extends State<Map> {
     Position position = await getCurrentPosition(
         desiredAccuracy: LocationAccuracy.bestForNavigation);
     position = await getLastKnownPosition();
-    print(position);
-    print('sdadasdasd');
   }
 }
 

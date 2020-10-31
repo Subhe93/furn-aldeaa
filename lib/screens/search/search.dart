@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class search extends StatefulWidget {
   static String id = "search";
@@ -29,7 +30,8 @@ class _searchState extends State<search> {
                     width: 60,
                   ),
                   Text(
-                    "Search for restaurants or dishs",
+                    Applocalizations.of(context)
+                        .translate("Search for restaurants or dishs"),
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
@@ -77,7 +79,7 @@ class SearchResultsTap extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: Text(
-            'RESTAURANTS',
+            Applocalizations.of(context).translate("RESTAURANTS"),
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
@@ -90,7 +92,8 @@ class SearchResultsTap extends StatelessWidget {
               child: ListView(
                 children: [
                   RestaurantCell(
-                    name: 'The Pizza Factory',
+                    name: Applocalizations.of(context)
+                        .translate("The Pizza Factory"),
                     image: 'images/بيتزا مارغريتا.jpg',
                   ),
                   RestaurantCell(
@@ -110,7 +113,7 @@ class SearchResultsTap extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: Text(
-            'DISHES',
+            Applocalizations.of(context).translate("DISHES"),
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
@@ -229,7 +232,7 @@ class RecentSearchTap extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: Text(
-            'RECENT SEARCHS',
+            Applocalizations.of(context).translate('RECENT SEARCHS'),
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
@@ -240,13 +243,13 @@ class RecentSearchTap extends StatelessWidget {
             child: ListView(
               children: [
                 RecentSearchItem(
-                  text: "Burgers",
+                  text: Applocalizations.of(context).translate("Burgers"),
                 ),
                 RecentSearchItem(
-                  text: "Burgers",
+                  text: Applocalizations.of(context).translate("Burgers"),
                 ),
                 RecentSearchItem(
-                  text: "pizza",
+                  text: Applocalizations.of(context).translate("pizza"),
                 ),
               ],
             ),
@@ -336,7 +339,7 @@ class _SearchBoxState extends State<SearchBox> {
                     borderSide: BorderSide(color: Colors.black, width: 2.0),
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   ),
-                  hintText: 'Search'),
+                  hintText: Applocalizations.of(context).translate("Search")),
             ),
             widget._textController.text.length > 0
                 ? new IconButton(

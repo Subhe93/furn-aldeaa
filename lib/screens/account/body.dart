@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 import '../../Constants.dart';
 
 class AccountBody extends StatefulWidget {
@@ -62,7 +63,8 @@ class _AccountBodyState extends State<AccountBody> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ListTile(
-                        title: Text('First Name'),
+                        title: Text(Applocalizations.of(context)
+                            .translate("First Name")),
                         subtitle: Text('James'),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -78,7 +80,8 @@ class _AccountBodyState extends State<AccountBody> {
                         ),
                       ),
                       ListTile(
-                        title: Text('Last Name'),
+                        title: Text(Applocalizations.of(context)
+                            .translate("Last Name")),
                         subtitle: Text('Smith'),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -94,7 +97,8 @@ class _AccountBodyState extends State<AccountBody> {
                         ),
                       ),
                       ListTile(
-                        title: Text('Phone Number'),
+                        title: Text(Applocalizations.of(context)
+                            .translate("Phone Number")),
                         subtitle: Text('0755 000 000'),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -110,7 +114,8 @@ class _AccountBodyState extends State<AccountBody> {
                         ),
                       ),
                       ListTile(
-                        title: Text('Email Address'),
+                        title: Text(Applocalizations.of(context)
+                            .translate("Email Address")),
                         subtitle: Text('jamessmith@gmail.com'),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -126,7 +131,8 @@ class _AccountBodyState extends State<AccountBody> {
                         ),
                       ),
                       ListTile(
-                        title: Text('Password'),
+                        title: Text(
+                            Applocalizations.of(context).translate("Password")),
                         subtitle: Text('*******'),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -188,7 +194,7 @@ Widget row() {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Name',
+            "Name",
             style: TextStyle(
               fontSize: 15,
             ),

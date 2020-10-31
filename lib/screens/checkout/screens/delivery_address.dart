@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class DeliverAddress extends StatefulWidget {
   static String id = 'delivery_address';
@@ -23,7 +24,7 @@ class _DeliverAddressState extends State<DeliverAddress> {
                   width: 60,
                 ),
                 Text(
-                  "Delivery Address",
+                  Applocalizations.of(context).translate("Delivery Address"),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -46,10 +47,10 @@ class _DeliverAddressState extends State<DeliverAddress> {
               child: CupertinoSlidingSegmentedControl(
                   groupValue: segment,
                   backgroundColor: Colors.black12,
-                  children: const <int, Widget>{
-                    0: Text('Home'),
-                    1: Text('Work'),
-                    2: Text('Other')
+                  children: <int, Widget>{
+                    0: Text(Applocalizations.of(context).translate('Home')),
+                    1: Text(Applocalizations.of(context).translate("Wrok")),
+                    2: Text(Applocalizations.of(context).translate("Other"))
                   },
                   onValueChanged: (value) {
                     setState(() {
@@ -61,11 +62,27 @@ class _DeliverAddressState extends State<DeliverAddress> {
               height: 20,
             ),
             InputBox(
-                'Enter Delivery Address', 'Delivery Address', false, false),
-            InputBox('eg.A5', 'Enter Building Name', false, false),
-            InputBox('eg.6th floor ,n199', 'Apartment/Suite', false, true),
-            InputBox('eg.Doorbell broken, please yell of knock hard',
-                'Note to ridder', true, true)
+                Applocalizations.of(context)
+                    .translate('Enter Delivery Address'),
+                Applocalizations.of(context).translate("Delivery Address"),
+                false,
+                false),
+            InputBox(
+                'eg.A5',
+                Applocalizations.of(context).translate("Enter Building Name"),
+                false,
+                false),
+            InputBox(
+                'eg.6th floor ,n199',
+                Applocalizations.of(context).translate("Apartment/Suite"),
+                false,
+                true),
+            InputBox(
+                Applocalizations.of(context)
+                    .translate("eg.Doorbell broken, please yell of knock hard"),
+                Applocalizations.of(context).translate("Note to ridder"),
+                true,
+                true)
           ],
         ),
       ),
@@ -76,7 +93,7 @@ class _DeliverAddressState extends State<DeliverAddress> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: longText ? 120 : 80,
+        height: longText ? 120 : 90,
         decoration: BoxDecoration(
           color: Colors.black.withOpacity(0.03),
           border: Border.all(width: 2, color: Colors.black26),
@@ -94,7 +111,12 @@ class _DeliverAddressState extends State<DeliverAddress> {
                     label,
                     style: TextStyle(color: Colors.black87, fontSize: 15),
                   ),
-                  optional ? Text(' (optional)') : Text(' *'),
+                  optional
+                      ? Text(
+                          Applocalizations.of(context)
+                              .translate("  (optional)"),
+                        )
+                      : Text(' *'),
                 ],
               ),
             ),

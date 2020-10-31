@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class DeliveryTime extends StatefulWidget {
   @override
@@ -25,7 +26,7 @@ class _DeliveryTimeState extends State<DeliveryTime> {
                 width: 60,
               ),
               Text(
-                "Delivery Time",
+                Applocalizations.of(context).translate("Delivery Time"),
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -56,7 +57,7 @@ class _DeliveryTimeState extends State<DeliveryTime> {
                     });
                   }),
               Text(
-                "ASAP",
+                Applocalizations.of(context).translate("ASAP"),
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ],
@@ -64,7 +65,7 @@ class _DeliveryTimeState extends State<DeliveryTime> {
           Padding(
             padding: const EdgeInsets.only(left: 15.0),
             child: Text(
-              'Choose Delivery Time:',
+              Applocalizations.of(context).translate("Choose Delivery Time:"),
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
@@ -112,7 +113,8 @@ class _DeliveryTimeState extends State<DeliveryTime> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Set Delivery Time',
+                        Applocalizations.of(context)
+                            .translate("Set Delivery Time"),
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,

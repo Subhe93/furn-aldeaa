@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class EmptyCart extends StatefulWidget {
   static String id = 'empty_cart';
@@ -30,7 +31,7 @@ class _EmptyCartState extends State<EmptyCart> {
                         width: 60,
                       ),
                       Text(
-                        "Your Cart",
+                        Applocalizations.of(context).translate("Your Cart"),
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
@@ -68,7 +69,7 @@ class _EmptyCartState extends State<EmptyCart> {
                   height: 10,
                 ),
                 Text(
-                  'Your Cart is Empty',
+                  Applocalizations.of(context).translate("Your Cart is Empty"),
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )
               ],
@@ -90,7 +91,8 @@ class _EmptyCartState extends State<EmptyCart> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Search Restaurants',
+                        Applocalizations.of(context)
+                            .translate("Search Restaurants"),
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),

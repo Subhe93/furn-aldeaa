@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furn_aldeaa/Constants.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:furn_aldeaa/localization/app_localization.dart';
 
 class OrderDetails extends StatefulWidget {
   static String id = 'order_details';
@@ -70,7 +71,10 @@ class _OrderDetailsState extends State<OrderDetails> {
                   children: [
                     Row(
                       children: [
-                        Text('Estimated Arrival :',
+                        Text(
+                            Applocalizations.of(context)
+                                    .translate("Estimated Arrival") +
+                                ":",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.normal)),
                         Text('19:15 - 19:30',
@@ -83,7 +87,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     ),
                     Row(
                       children: [
-                        Text('Order',
+                        Text(Applocalizations.of(context).translate("Order"),
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.normal)),
                         Text('#1333',
@@ -116,7 +120,9 @@ class _OrderDetailsState extends State<OrderDetails> {
                               SizedBox(
                                 width: 10,
                               ),
-                              Text('Delivered',
+                              Text(
+                                  Applocalizations.of(context)
+                                      .translate("Delivered"),
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.normal))
@@ -188,7 +194,9 @@ class _OrderDetailsState extends State<OrderDetails> {
                               ),
                               Row(
                                 children: [
-                                  Text('Pepperoni',
+                                  Text(
+                                      Applocalizations.of(context)
+                                          .translate("Pepperoni"),
                                       style: TextStyle(
                                         fontWeight: FontWeight.normal,
                                       )),
@@ -226,7 +234,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Subtotal',
+                      Text(Applocalizations.of(context).translate('Subtotal'),
                           style:
                               TextStyle(fontSize: 17, color: Colors.black54)),
                       Text('\$29.22',
@@ -239,7 +247,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Subtotal',
+                      Text(Applocalizations.of(context).translate('Subtotal'),
                           style:
                               TextStyle(fontSize: 15, color: Colors.black54)),
                       Text('\$29.22',
@@ -252,7 +260,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Subtotal',
+                      Text(Applocalizations.of(context).translate('Subtotal'),
                           style:
                               TextStyle(fontSize: 15, color: Colors.black54)),
                       Text('\$29.22',
@@ -265,7 +273,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Total',
+                      Text(Applocalizations.of(context).translate('Total'),
                           style: TextStyle(
                               fontSize: 15,
                               color: Colors.black87,
@@ -287,7 +295,7 @@ class _OrderDetailsState extends State<OrderDetails> {
               height: 30,
             ),
             Center(
-                child: Text('Get Help',
+                child: Text(Applocalizations.of(context).translate("Get Help"),
                     style: TextStyle(
                         fontSize: 20, fontWeight: FontWeight.normal))),
             Padding(
@@ -298,7 +306,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     color: yellow, borderRadius: BorderRadius.circular(20)),
                 child: Center(
                   child: Text(
-                    'Reorder',
+                    Applocalizations.of(context).translate("Reorder"),
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
